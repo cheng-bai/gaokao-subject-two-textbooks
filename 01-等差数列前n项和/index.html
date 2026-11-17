@@ -1,0 +1,1378 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="chengbai"><link rel="stylesheet" href="../阅读样式.css"><title>教材专题摘录</title></head><body><main><nav><a href="../index.html">返回总目录</a></nav><h1
+id="等差数列前n项和双教材原文摘录">等差数列前n项和｜双教材原文摘录</h1>
+<p>本文件保留相关章节的讲解、例题与随堂练习，按版本分段。较宽章节含相邻知识和混合习题，尚未逐题筛选、配答或审校。原文为转写稿，请对照教材原件。</p>
+<h2 id="人教a版4.2.2-等差数列的前n项和公式">人教A版：4.2.2
+等差数列的前n项和公式</h2>
+<p>来源：01_第四章_数列.md（本地转写稿），转写稿第
+748—1139 行；截至下一指定标题前。</p>
+<h2 id="等差数列的前n项和公式">4.2.2 等差数列的前n项和公式</h2>
+<p>前面我们学习了等差数列的概念和通项公式，下面我们将利用这些知识解决等差数列的求和问题</p>
+<p>据说，二百多年前，高斯的算术老师提出了下面的问题：</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>1</mn><mn>0</mn><mn>0</mn><mo>=</mo><mi>?</mi></mrow><annotation encoding="application/x-tex">1 + 2 + 3 + \cdots + 1 0 0 = ?</annotation></semantics></math></p>
+<p><img
+src="../assets/641fc1cab282bfbb5dee311e40de866da4ff14e2160fd4b4134290b3b488da02.jpg" /></p>
+<p>当其他同学忙于把100个数逐项相加时，10岁的高斯却用下面的方法迅速算出了正确答案：</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>1</mn><mn>0</mn><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>+</mo><mn>9</mn><mn>9</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mn>0</mn><mo>+</mo><mn>5</mn><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mn>0</mn><mn>1</mn><mo>×</mo><mn>5</mn><mn>0</mn><mo>=</mo><mn>5</mn><mn>0</mn><mn>5</mn><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">( 1 + 1 0 0 ) + ( 2 + 9 9 ) + \cdots + ( 5 0 + 5 1 ) = 1 0 1 \times 5 0 = 5 0 5 0 .</annotation></semantics></math></p>
+<p>高斯的算法实际上解决了求等差数列</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>⋯</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>⋯</mi></mrow><annotation encoding="application/x-tex">1 , \ 2 , \ 3 , \ \cdots , \ n , \ \cdots\tag{①}</annotation></semantics></math></p>
+<p>前100项的和的问题.</p>
+<p>高斯(Gauss,1777—1855)，德国数学家，近代数学的奠基者之一.他在天文学、大地测量学、磁学、光学等领域都作出了杰出贡献.</p>
+<h2 id="思考">思考</h2>
+<p>你能说说高斯在求和过程中利用了数列①的什么性质吗？你能从中得到求数列①的前
+n 项和的方法吗？</p>
+<p>对于数列①，设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">a _ { n } = n</annotation></semantics></math>
+，那么高斯的计算方法可以表示为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>0</mn><mn>0</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>9</mn><mn>9</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mrow><mn>5</mn><mn>0</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>5</mn><mn>1</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mn>0</mn><mn>1</mn><mo>×</mo><mn>5</mn><mn>0</mn><mo>=</mo><mn>5</mn><mn>0</mn><mn>5</mn><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">( a _ { 1 } + a _ { 1 0 0 } ) + ( a _ { 2 } + a _ { 9 9 } ) + \cdots + ( a _ { 5 0 } + a _ { 5 1 } ) = 1 0 1 \times 5 0 = 5 0 5 0 .</annotation></semantics></math></p>
+<p>可以发现，高斯在计算中利用了</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>0</mn><mn>0</mn></mrow></msub><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>9</mn><mn>9</mn></mrow></msub><mo>=</mo><mi>⋯</mi><mo>=</mo><msub><mi>a</mi><mrow><mn>5</mn><mn>0</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>5</mn><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">a _ { 1 } + a _ { 1 0 0 } = a _ { 2 } + a _ { 9 9 } = \cdots = a _ { 5 0 } + a _ { 5 1 }</annotation></semantics></math></p>
+<p>这一特殊关系，这就是上一小节例5中性质的应用，它使不同数的求和问题转化成了相同数（即101）的求和，从而简化了运算。</p>
+<p>你能用高斯的方法求1+2+…+100+101吗?</p>
+<p>将上述方法推广到一般，可以得到：</p>
+<p>当n是偶数时，有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>⋯</mi><mo>=</mo><msub><mi>a</mi><mfrac><mi>n</mi><mn>2</mn></mfrac></msub><mo>+</mo><msub><mi>a</mi><mrow><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">a _ { 1 } + a _ { n } = a _ { 2 } + a _ { n - 1 } = \cdots = a _ { \frac { n } { 2 } } + a _ { \frac { n } { 2 } + 1 } ,</annotation></semantics></math></p>
+<p>于是有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>S</mi><mi>n</mi></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mn>2</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><munder><munder><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">⏟</mo></munder><mrow><mfrac><mi>n</mi><mn>2</mn></mfrac><mtext mathvariant="normal">个</mtext></mrow></munder></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned} S_n&amp;=1+2+3+\cdots+n \\ &amp;= (1+n)+[2+(n-1)]+\cdots+\left[\frac n2+\left(\frac n2+1\right)\right] \\ &amp;=\underbrace{(1+n)+(1+n)+\cdots+(1+n)}_{\frac n2\text{个}} \\ &amp;=\frac{n(1+n)}2. \end{aligned}</annotation></semantics></math></p>
+<p>当n为奇数时，有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>S</mi><mi>n</mi></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mn>2</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><munder><munder><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">⏟</mo></munder><mrow><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mtext mathvariant="normal">个</mtext></mrow></munder><mo>+</mo><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+S_n&amp;=1+2+3+\cdots+n \\
+&amp;=(1+n)+[2+(n-1)]+\cdots+\left[\left(\frac{n+1}{2}-1\right)+\left(\frac{n+1}{2}+1\right)\right]+\frac{n+1}{2} \\
+&amp;=\underbrace{(1+n)+(1+n)+\cdots+(1+n)}_{\frac{n-1}{2}\text{个}}+\frac{n+1}{2} \\
+&amp;=\frac{n-1}{2}(1+n)+\frac{n+1}{2}=\frac{n(1+n)}{2}.
+\end{aligned}</annotation></semantics></math></p>
+<p>所以，对任意正整数n，都有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">S _ { n } = 1 + 2 + 3 + \cdots + n = { \frac { n \left( 1 + n \right) } { 2 } } .</annotation></semantics></math></p>
+<h2 id="思考-1">思考</h2>
+<p>我们发现，在求前n个正整数的和时，要对n分奇数、偶数进行讨论，比较麻烦．
+能否设法避免分类讨论？</p>
+<p>如果对公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">S _ { n } = 1 + 2 + 3 + \cdots + n = { \frac { n \left( n + 1 \right) } { 2 } }</annotation></semantics></math>
+作变形，可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">2 S _ { n } = 2 ( 1 + 2 + 3 + \cdots + n ) = n \left( n + 1 \right) ,</annotation></semantics></math></p>
+<p>它相当于两个
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+相加，而结果变成n个（n+1）相加.</p>
+<p>受此启发，我们得到下面的方法：</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>+</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr></mtable><mo>+</mo><mi>…</mi><mo>+</mo><mi>n</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>…</mi><mo>+</mo><mn>1</mn><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { l c r } { { S _ { n } = 1 + \begin{array} { c c c } { { 2 } } &amp; { { + } } &amp; { { 3 } } \end{array} + \dots + n , } } \\ { { S _ { n } = n + ( n - 1 ) + ( n - 2 ) + \dots + 1 , } } \end{array}</annotation></semantics></math></p>
+<p>将上述两式相加，可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mn>2</mn><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn><mo stretchy="false" form="postfix">]</mo><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mo stretchy="false" form="postfix">]</mo><mo>+</mo><mi>…</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="2.0em"></mspace><mo>=</mo><munder><munder><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>…</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">⏟</mo></munder><mrow><mi>n</mi><mtext mathvariant="normal">个</mtext></mrow></munder></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="2.0em"></mspace><mo>=</mo><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r l } &amp; { 2 S _ { n } = ( n + 1 ) + [ ( n - 1 ) + 2 ] + [ ( n - 2 ) + 3 ] + \dots + ( 1 + n ) } \\ &amp; { \qquad = \underbrace { ( 1 + n ) + ( 1 + n ) + \dots + ( 1 + n ) } _ { n\text{个} } } \\ &amp; { \qquad = n \left( n + 1 \right) , } \end{array}</annotation></semantics></math></p>
+<p>所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">S _ { n } = 1 + 2 + 3 + \cdots + n = \frac { n \left( n + 1 \right) } { 2 } .</annotation></semantics></math></p>
+<h2 id="探究">探究</h2>
+<p>上述方法的妙处在哪里？这种方法能够推广到求等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的前 n 项和吗？</p>
+<p>可以发现，上述方法的妙处在于将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1 + 2 + 3 + \cdots + n</annotation></semantics></math>
+“倒序”为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n + ( n - 1 ) + ( n - 2 ) + \cdots + 1</annotation></semantics></math>，再将两式相加，得到n个相同的数（即n+1）相加，从而把不同数的求和转化为n个相同的数求和.</p>
+<p>对于等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+，因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>⋯</mi><mo>=</mo><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a _ { 1 } + a _ { n } = a _ { 2 } + a _ { n - 1 } = \cdots = a _ { n } + a _ { 1 }</annotation></semantics></math>
+，由上述方法得到启示，我们用两种方式表示
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="italic"> 𝑎 </mtext><mspace width="0.333em"></mspace></mrow><mn>2</mn></msub><mspace width="0.222em"></mspace><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">S _ { n } = a _ { 1 } + \textit { a } _ { 2 } \ + \cdots + a _ { n } ,\tag{②}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">S _ { n } { = } a _ { n } { + } a _ { n - 1 } { + } { \cdots } { + } a _ { 1 } { . }\tag{③}</annotation></semantics></math></p>
+<p>②+③，得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mn>2</mn><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="1.0em"></mspace><mspace width="0.222em"></mspace><mo>=</mo><munder><munder><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">⏟</mo></munder><mrow><mi>n</mi><mtext mathvariant="normal">个</mtext></mrow></munder></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="0.222em"></mspace><mo>=</mo><mi>n</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r l } &amp; { 2 S _ { n } { = } ( a _ { 1 } { + } a _ { n } ) + ( a _ { 2 } { + } a _ { n - 1 } ) { + } \dotsb { + } ( a _ { n } { + } a _ { 1 } ) } \\ &amp; { \quad ~ { = } \underbrace { ( a _ { 1 } { + } a _ { n } ) + ( a _ { 1 } { + } a _ { n } ) + \dotsb { + } ( a _ { 1 } { + } a _ { n } ) } _ { n\text{个} } } \\ &amp; { ~ { = } n ( a _ { 1 } { + } a _ { n } ) . } \end{array}</annotation></semantics></math></p>
+<p>由此得到等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的前n项和公式</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">\boxed { S _ { n } = \frac { n \left( a _ { 1 } + a _ { n } \right) } { 2 } . }\tag{1}</annotation></semantics></math></p>
+<p>将（1）变形可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mi>n</mi></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">{ \frac { a _ { 1 } + a _ { n } } { 2 } } = { \frac { a _ { 1 } + a _ { 2 } + \cdots + a _ { n } } { n } } ,</annotation></semantics></math></p>
+<p>所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac { a _ { 1 } + a _ { n } } { 2 }</annotation></semantics></math>
+就是等差数列<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+前n项的平均数.
+实际上，我们就是利用等差数列的这一重要特性来推导它的前n项和的.
+你还能发现这一特性的一些应用吗？</p>
+<p>对于等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+，利用公式（1），只要已知等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的首项
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+和末项
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a _ { n }</annotation></semantics></math>
+，就可以求得前n项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+.另外，如果已知首项
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+和公差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+，那么这个等差数列就完全确定了，所以我们也可以用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+来表示
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+.</p>
+<p>把等差数列的通项公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">a _ { n } = a _ { 1 } + ( n - 1 ) d</annotation></semantics></math>
+代入公式(1)，可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>d</mi><mi>.</mi></mrow><mo accent="true">¯</mo></mover><annotation encoding="application/x-tex">\overline { { S _ { n } = n a _ { 1 } + \frac { n \left( n - 1 \right) } { 2 } d . } }\tag{2}</annotation></semantics></math></p>
+<h2 id="思考-2">思考</h2>
+<p>不从公式（1）出发，你能用其他方法得到公式（2）吗？</p>
+<p><span id="candidate-1"></span></p>
+<p>例6 已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+是等差数列.</p>
+<ol type="1">
+<li><p>若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>7</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mrow><mn>5</mn><mn>0</mn></mrow></msub><mo>=</mo><mn>1</mn><mn>0</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } = 7 , ~ a _ { 5 0 } = 1 0 1</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mn>5</mn><mn>0</mn></mrow></msub><annotation encoding="application/x-tex">S _ { 5 0 }</annotation></semantics></math></p></li>
+<li><p>若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">a _ { 1 } = 2 , ~ a _ { 2 } = \frac { 5 } { 2 }</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mn>1</mn><mn>0</mn></mrow></msub><annotation encoding="application/x-tex">S _ { 1 0 }</annotation></semantics></math></p></li>
+<li><p>若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mi>d</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } = \frac { 1 } { 2 } , \ d = - \frac { 1 } { 6 } , \ S _ { n } = - 5</annotation></semantics></math>
+，求n.</p></li>
+</ol>
+<p>对于等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{a_n\}</annotation></semantics></math>
+的相关量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a_1</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a_n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>，已知几个量就可以确定其他量？</p>
+<p>分析：对于（1），可以直接利用公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">S _ { n } { = } \frac { n \left( a _ { 1 } { + } a _ { n } \right) } { 2 }</annotation></semantics></math>
+求和；在（2）中，可以先利用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>2</mn></msub><annotation encoding="application/x-tex">a _ { 2 }</annotation></semantics></math>
+的值求出d，再利用公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>d</mi></mrow><annotation encoding="application/x-tex">S _ { n } { = } n a _ { 1 } { + } \frac { n \left( n { - } 1 \right) } { 2 } d</annotation></semantics></math>
+求和；（3）已知公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo></mrow><annotation encoding="application/x-tex">S _ { n } = n a _ { 1 } +</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mi>d</mi></mrow><annotation encoding="application/x-tex">{ \frac { n ( n - 1 ) } { 2 } } d</annotation></semantics></math>
+中的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mi>d</mi></mrow><annotation encoding="application/x-tex">a _ { 1 } , \ d</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+，解方程即可求得n.</p>
+<p>解：（1）因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>7</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>50</mn></msub><mo>=</mo><mn>101</mn></mrow><annotation encoding="application/x-tex">a_1=7,\ a_{50}=101</annotation></semantics></math>，根据公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">S_n=\frac{n(a_1+a_n)}{2}</annotation></semantics></math>，可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mn>5</mn><mn>0</mn></mrow></msub><mo>=</mo><mfrac><mrow><mn>5</mn><mn>0</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>7</mn><mo>+</mo><mn>1</mn><mn>0</mn><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mo>=</mo><mn>2</mn><mn>7</mn><mn>0</mn><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">S _ { 5 0 } = \frac { 5 0 \times ( 7 + 1 0 1 ) } { 2 } = 2 7 0 0 .</annotation></semantics></math></p>
+<ol start="2" type="1">
+<li>因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">a_1=2,\ a_2=\frac52</annotation></semantics></math>，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">d=\frac12</annotation></semantics></math>。根据公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mi>d</mi></mrow><annotation encoding="application/x-tex">S_n=na_1+\frac{n(n-1)}{2}d</annotation></semantics></math>，可得</li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mn>1</mn><mn>0</mn></mrow></msub><mo>=</mo><mn>1</mn><mn>0</mn><mo>×</mo><mn>2</mn><mo>+</mo><mfrac><mrow><mn>1</mn><mn>0</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mn>0</mn><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>8</mn><mn>5</mn></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">S _ { 1 0 } = 1 0 \times 2 + \frac { 1 0 \times ( 1 0 - 1 ) } { 2 } \times \frac { 1 } { 2 } = \frac { 8 5 } { 2 } .</annotation></semantics></math></p>
+<p>(3)把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">a _ { 1 } = \frac { 1 } { 2 }</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">d = - { \frac { 1 } { 6 } }</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">S _ { n } = - 5</annotation></semantics></math>
+代入
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mspace width="0.222em"></mspace><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>d</mi></mrow><annotation encoding="application/x-tex">S _ { n } { = } ~ n a _ { 1 } { + } \frac { n \left( n { - } 1 \right) } 2 d</annotation></semantics></math>
+，得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>5</mn><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>n</mi><mo>+</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>×</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mfrac><mn>1</mn><mn>6</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">- 5 = { \frac { 1 } { 2 } } n + { \frac { n \left( n - 1 \right) } { 2 } } \times \left( - { \frac { 1 } { 6 } } \right) .</annotation></semantics></math></p>
+<p>整理，得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>7</mn><mi>n</mi><mo>−</mo><mn>6</mn><mn>0</mn><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">n ^ { 2 } - 7 n - 6 0 = 0 .</annotation></semantics></math></p>
+<p>解得</p>
+<p>n=12，或n=-5（舍去）.</p>
+<p>所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn><mn>2</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">n { = } 1 2 .</annotation></semantics></math></p>
+<p><span id="candidate-2"></span></p>
+<p>例7 已知一个等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+前10项的和是310，前20项的和是1220.由这些条件能确定这个等差数列的首项和公差吗？</p>
+<p>分析：把已知条件代入等差数列前n项和的公式（2）后，可得到两个关于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+与 d的二元一次方程.解这两个二元一次方程所组成的方程组，就可以求得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">d .</annotation></semantics></math></p>
+<p>解：由题意，知</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><msub><mi>S</mi><mrow><mn>1</mn><mn>0</mn></mrow></msub><mo>=</mo><mn>3</mn><mn>1</mn><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mrow><mn>2</mn><mn>0</mn></mrow></msub><mo>=</mo><mn>1</mn><mn>2</mn><mn>2</mn><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r } { S _ { 1 0 } = 3 1 0 , \ S _ { 2 0 } = 1 2 2 0 . } \end{array}</annotation></semantics></math></p>
+<p>把它们代入公式</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>d</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">S _ { n } = n a _ { 1 } + \frac { n \left( n - 1 \right) } { 2 } d ,</annotation></semantics></math></p>
+<p>得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mn>1</mn><mn>0</mn><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mn>4</mn><mn>5</mn><mi>d</mi><mo>=</mo><mn>3</mn><mn>1</mn><mn>0</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mn>2</mn><mn>0</mn><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mn>1</mn><mn>9</mn><mn>0</mn><mi>d</mi><mo>=</mo><mn>1</mn><mn>2</mn><mn>2</mn><mn>0</mn><mi>.</mi></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{ { \begin{array} { l } { { 1 0 a _ { 1 } + 4 5 d = 3 1 0 , } } \\ { { 2 0 a _ { 1 } + 1 9 0 d = 1 2 2 0 . } } \end{array} } \right.</annotation></semantics></math></p>
+<p>解方程组，得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>4</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>d</mi><mo>=</mo><mn>6</mn><mi>.</mi></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{ \begin{array} { l l } { a _ { 1 } = 4 , } \\ { ~ } \\ { d = 6 . } \end{array} \right.</annotation></semantics></math></p>
+<p>所以，由所给的条件可以确定等差数列的首项和公差.</p>
+<p>一般地，对于等差数列，只要给定两个相互独立的条件，这个数列就完全确定.</p>
+<h2 id="探究-1">探究</h2>
+<p>已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的前n 项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>p</mi><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mi>n</mi><mo>+</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">S _ { n } = p n ^ { 2 } + q n + r</annotation></semantics></math>
+，其中p，q，r为常数，且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>≠</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">p \neq 0 .</annotation></semantics></math>
+任取若干组p，q，r，在电子表格中计算
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>3</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>4</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">a _ { 1 } , ~ a _ { 2 } , ~ a _ { 3 } , ~ a _ { 4 } , ~ a _ { 5 }</annotation></semantics></math>
+的值（图 4.2-3 给出p=1，q=2，r=0的情况），观察数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的特点，研究它是一个怎样的数列，并证明你的结论.</p>
+<table>
+<tr>
+<td rowspan="1" colspan="1">
+</td>
+<td rowspan="1" colspan="1">
+A
+</td>
+<td rowspan="1" colspan="1">
+B
+</td>
+<td rowspan="1" colspan="1">
+C
+</td>
+<td rowspan="1" colspan="1">
+D
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+1
+</td>
+<td rowspan="1" colspan="1">
+1
+</td>
+<td rowspan="1" colspan="1">
+3
+</td>
+<td rowspan="1" colspan="1">
+3
+</td>
+<td rowspan="1" colspan="1">
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+2
+</td>
+<td rowspan="1" colspan="1">
+2
+</td>
+<td rowspan="1" colspan="1">
+8
+</td>
+<td rowspan="1" colspan="1">
+5
+</td>
+<td rowspan="1" colspan="1">
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+3
+</td>
+<td rowspan="1" colspan="1">
+0
+</td>
+<td rowspan="1" colspan="1">
+15
+</td>
+<td rowspan="1" colspan="1">
+7
+</td>
+<td rowspan="2" colspan="1">
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+4
+</td>
+<td rowspan="1" colspan="1">
+</td>
+<td rowspan="1" colspan="1">
+24
+</td>
+<td rowspan="1" colspan="1">
+9
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+5
+</td>
+<td rowspan="1" colspan="1">
+</td>
+<td rowspan="1" colspan="1">
+35
+</td>
+<td rowspan="1" colspan="1">
+11
+</td>
+<td rowspan="1" colspan="1">
+</td>
+</tr>
+</table>
+<p>图4.2-3</p>
+<p>图 4.2-3中的电子表格 A列中
+A1，A2，A3分别表示p，q，r的值，B列、C列中分别是相应的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒂</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\boldsymbol { a } _ { n }</annotation></semantics></math>
+的值.</p>
+<h2 id="练习">练习</h2>
+<ol type="1">
+<li>根据下列各题中的条件，求相应等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+的前n项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math></li>
+</ol>
+<ol type="1">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>5</mn><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>9</mn><mn>5</mn><mo>,</mo><mi>n</mi><mo>=</mo><mn>1</mn><mn>0</mn><mo>;</mo></mrow><annotation encoding="application/x-tex">a _ { 1 } = 5 , a _ { n } = 9 5 , n = 1 0 ;</annotation></semantics></math>
+(2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mn>0</mn><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>d</mi><mo>=</mo><mi>−</mi><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>=</mo><mn>5</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } = 1 0 0 , \ d = - 2 , \ n = 5 0</annotation></semantics></math></p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>4</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>8</mn></msub><mo>=</mo><mi>−</mi><mn>1</mn><mn>8</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>=</mo><mn>1</mn><mn>0</mn><mo>;</mo></mrow><annotation encoding="application/x-tex">a _ { 1 } = - 4 , \ a _ { 8 } = - 1 8 , \ n = 1 0 ;</annotation></semantics></math>
+(4)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mn>4</mn><mi>.</mi><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>d</mi><mo>=</mo><mn>0</mn><mi>.</mi><mn>7</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>3</mn><mn>2</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">a _ { 1 } = 1 4 . 5 , ~ d = 0 . 7 , ~ a _ { n } = 3 2 .</annotation></semantics></math></p></li>
+</ol>
+<ol start="2" type="1">
+<li><p>等差数列—1，-3，-5，…的前多少项的和是—100?</p></li>
+<li><p>在等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+中，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+为其前n项的和，若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>4</mn></msub><mo>=</mo><mn>6</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mn>8</mn></msub><mo>=</mo><mn>2</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">S _ { 4 } { = } 6 , \ S _ { 8 } { = } 2 0</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mn>1</mn><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">S _ { 1 6 }</annotation></semantics></math></p></li>
+<li><p>在等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+中，若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mn>1</mn><mn>5</mn></mrow></msub><mo>=</mo><mn>5</mn><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mn>6</mn></msub><mo>+</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S _ { 1 5 } = 5 ( a _ { 2 } + a _ { 6 } + a _ { k } )</annotation></semantics></math>
+，求k.</p></li>
+</ol>
+<p>5.已知一个等差数列的项数为奇数，其中所有奇数项的和为290，所有偶数项的和为261.求此数列中间一项的值以及项数</p>
+<p><span id="candidate-3"></span></p>
+<p>例8某校新建一个报告厅，要求容纳800个座位，报告厅共有20排座位，从第2排起后一排都比前一排多2个座位.问第1排应安排多少个座位.</p>
+<p>分析：将第1排到第20排的座位数依次排成一列，构成数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+.设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的前n项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+.由题意可知，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+是等差数列，且公差及前20项的和已知，所以可利用等差数列的前n项和公式求首项.</p>
+<p>解：设报告厅的座位从第1排到第20排，各排的座位数依次排成一列，构成数列<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+，其前n项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+．根据题意，数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+是一个公差为2的等差数列，且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mn>2</mn><mn>0</mn></mrow></msub><mo>=</mo><mn>8</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">S _ { 2 0 } { = } 8 0 0</annotation></semantics></math></p>
+<p>由
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mn>2</mn><mn>0</mn></mrow></msub><mo>=</mo><mn>2</mn><mn>0</mn><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mn>2</mn><mn>0</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mn>0</mn><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mo>×</mo><mn>2</mn><mo>=</mo><mn>8</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">S _ { 2 0 } = 2 0 a _ { 1 } + \frac { 2 0 \times ( 2 0 - 1 ) } { 2 } \times 2 = 8 0 0</annotation></semantics></math>
+，可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">a _ { 1 } = 2 1 .</annotation></semantics></math></p>
+<p>因此，第1排应安排21个座位.</p>
+<p><span id="candidate-4"></span></p>
+<p>例9已知等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的前n项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+，若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } = 1 0</annotation></semantics></math>
+，公差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">d = - 2</annotation></semantics></math>
+，则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+是否存在最大值？若存在，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+的最大值及取得最大值时n的值；若不存在，请说明理由.</p>
+<p>分析：由
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } &gt; 0</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d { &lt; } 0</annotation></semantics></math>
+，可以证明
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+是递减数列，且存在正整数k，使得当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">n { \geqslant } k</annotation></semantics></math>
+时，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>&lt;</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a _ { n } { &lt; } 0 , \ S _ { n }</annotation></semantics></math>
+递减.这样，就把求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+的最大值转化为求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的所有正数项的和.</p>
+<p>另一方面，等差数列的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和公式可写成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mi>d</mi><mn>2</mn></mfrac><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>−</mo><mfrac><mi>d</mi><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">S_n=\frac{d}{2}n^2+\left(a_1-\frac{d}{2}\right)n</annotation></semantics></math>，所以当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d\neq 0</annotation></semantics></math>
+时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>
+可以看成二次函数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mfrac><mi>d</mi><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>−</mo><mfrac><mi>d</mi><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>x</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>∈</mo><mi mathvariant="bold-italic">𝑹</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">y=\frac{d}{2}x^2+\left(a_1-\frac{d}{2}\right)x\ (x\in\mathbf R)</annotation></semantics></math>
+当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">x=n</annotation></semantics></math>
+时的函数值。如图4.2-4，当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d&lt;0</annotation></semantics></math>
+时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>
+关于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+的图象是一条开口向下的抛物线上的一些点。因此，可以利用二次函数求相应的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S_n</annotation></semantics></math>
+的值。</p>
+<p><img
+src="../assets/c60c33c5c969e9d3abaa5c04c8b6b645e75e8e9a6fb3fc1cb3dab8edf7c9357b.jpg" /></p>
+<p>解法1：由
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>2</mn><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a _ { n + 1 } - a _ { n } = - 2 &lt; 0</annotation></semantics></math>
+，得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&lt;</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a _ { n + 1 } &lt; a _ { n }</annotation></semantics></math>
+，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+是递减数列.</p>
+<p>又由
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn><mn>0</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn><mn>2</mn></mrow><annotation encoding="application/x-tex">\ a _ { n } = 1 0 + ( n - 1 ) \times ( - 2 ) = - 2 n + 1 2</annotation></semantics></math>
+，可知：</p>
+<p>图4.2-4</p>
+<p>当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&lt;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n { &lt; } 6</annotation></semantics></math>
+时，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a _ { n } &gt; 0</annotation></semantics></math>
+当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n = 6</annotation></semantics></math>
+时，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">{ { a } _ { n } } = 0</annotation></semantics></math>
+当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n &gt; 6</annotation></semantics></math>
+时，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>&lt;</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">a _ { n } &lt; 0 .</annotation></semantics></math></p>
+<p>所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>S</mi><mn>2</mn></msub><mo>&lt;</mo><mi>⋯</mi><mo>&lt;</mo><msub><mi>S</mi><mn>5</mn></msub><mo>=</mo><msub><mi>S</mi><mn>6</mn></msub><mo>&gt;</mo><msub><mi>S</mi><mn>7</mn></msub><mo>&gt;</mo><mi>⋯</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">S _ { 1 } { &lt; } S _ { 2 } { &lt; } \cdots { &lt; } S _ { 5 } { = } S _ { 6 } { &gt; } S _ { 7 } { &gt; } \cdots .</annotation></semantics></math></p>
+<p>也就是说，当n=5或6时，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+最大.</p>
+<p>因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>5</mn></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo>×</mo><mo stretchy="false" form="prefix">[</mo><mn>2</mn><mo>×</mo><mn>1</mn><mn>0</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>3</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">S _ { 5 } = \frac { 5 } { 2 } \times [ 2 \times 1 0 + ( 5 - 1 ) \times ( - 2 ) ] = 3 0</annotation></semantics></math>
+，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+的最大值为30.</p>
+<p>解法2：因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mi>d</mi><mn>2</mn></mfrac><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>−</mo><mfrac><mi>d</mi><mn>2</mn></mfrac><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mi>n</mi></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mo>=</mo><mi>−</mi><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mn>1</mn><mi>n</mi></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mo>=</mo><mi>−</mi><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mfrac><mrow><mn>1</mn><mn>1</mn></mrow><mn>2</mn></mfrac><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mfrac><mrow><mn>1</mn><mn>2</mn><mn>1</mn></mrow><mn>4</mn></mfrac><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { l } { { S _ { n } = \displaystyle \frac { d } { 2 } n ^ { 2 } + \bigl ( a _ { 1 } { - } \frac { d } { 2 } \bigr ) n } } \\ { { \mathrm { ~ } = - n ^ { 2 } + 1 1 n } } \\ { { \mathrm { ~ } = - \bigl ( n { - } \frac { 1 1 } { 2 } \bigr ) ^ { 2 } + \frac { 1 2 1 } { 4 } , } } \end{array}</annotation></semantics></math></p>
+<p>想一想，这是为什么？</p>
+<p>所以，当n取与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mn>1</mn><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac { 1 1 } { 2 }</annotation></semantics></math>
+最接近的整数即5或6时，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+最大，最大值为30.</p>
+<h2 id="思考-3">思考</h2>
+<p>在例 9 中，当d=—3.5 时，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+有最大值吗？结合例9考虑更一般的等差数列前n 项和的最大值问题.</p>
+<h2 id="练习-1">练习</h2>
+<p>1.某市一家商场的新年最高促销奖设立了两种领奖方式：第一种，获奖者可以选择2000元的奖金；第二种，从12月20日到第二年的1月1日，每天到该商场领取奖品，第1天领取的奖品价值为100元，第2天为110元，以后逐天增加10元.你认为哪种领奖方式获奖者受益更多？</p>
+<ol start="2" type="1">
+<li>已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的前n项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>n</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">S _ { n } = \frac { 1 } { 4 } n ^ { 2 } + \frac { 2 } { 3 } n + 3</annotation></semantics></math>
+求这个数列的通项公式</li>
+</ol>
+<p>3.已知等差数列—4.2，-3.7，—3.2，…的前n项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>,</mo><msub><mi>S</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">S _ { n } , S _ { n }</annotation></semantics></math>
+是否存在最大（小）值？如果存在，求出取得最值时n的值.</p>
+<ol start="4" type="1">
+<li>求集合
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>m</mi><mo>∣</mo><mi>m</mi><mo>=</mo><mn>2</mn><mi>n</mi><mo>−</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>∈</mo><msup><mi mathvariant="bold-italic">𝑵</mi><mo>*</mo></msup><mo>,</mo><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">且 </mtext><mspace width="0.333em"></mspace></mrow><mi>m</mi><mo>&lt;</mo><mn>60</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">M=\{m\mid m=2n-1,\ n\in\mathbf N^*,\ \text{且 }m&lt;60\}</annotation></semantics></math>
+中元素的个数，并求这些元素的和.</li>
+</ol>
+<p>*5.已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+的通项公式为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow><mrow><mn>2</mn><mi>n</mi><mo>−</mo><mn>1</mn><mn>5</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">a _ { n } = \frac { n - 2 } { 2 n - 1 5 }</annotation></semantics></math>
+，前n项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+取得最小值时n的值.</p>
+<h2 id="习题4.2">习题4.2</h2>
+<h2 id="复习巩固">复习巩固</h2>
+<ol type="1">
+<li>根据下列等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+中的已知量，求相应的未知量：</li>
+</ol>
+<ol type="1">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>5</mn><mn>4</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>9</mn><mn>9</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } = 2 0 , \ a _ { n } = 5 4 , \ S _ { n } = 9 9 9</annotation></semantics></math>
+，求d及n; (2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>=</mo><mn>3</mn><mn>7</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>6</mn><mn>2</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">d = { \frac { 1 } { 3 } } , \ n = 3 7 , \ S _ { n } = 6 2 9</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>;</mo></mrow><annotation encoding="application/x-tex">a _ { n } ;</annotation></semantics></math></p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mfrac><mn>5</mn><mn>6</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mi>d</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } = \frac { 5 } { 6 } , \ d = - \frac { 1 } { 6 } , \ S _ { n } = - 5</annotation></semantics></math>
+，求n及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a _ { n }</annotation></semantics></math>
+(4)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>=</mo><mn>1</mn><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">d = 2 , \ n = 1 5 , \ a _ { n } = - 1 0</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">a _ { 1 }</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">S _ { n } .</annotation></semantics></math></p></li>
+</ol>
+<ol start="2" type="1">
+<li><p>已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \}</annotation></semantics></math>
+为等差数列，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><msub><mi>a</mi><mn>5</mn></msub><mo>=</mo><mn>1</mn><mn>0</mn><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mn>4</mn></msub><mo>+</mo><msub><mi>a</mi><mn>6</mn></msub><mo>=</mo><mn>9</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } + a _ { 3 } + a _ { 5 } = 1 0 5 , ~ a _ { 2 } + a _ { 4 } + a _ { 6 } = 9 9</annotation></semantics></math>
+求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mrow><mn>2</mn><mn>0</mn></mrow></msub><annotation encoding="application/x-tex">a _ { 2 0 }</annotation></semantics></math></p></li>
+<li><p>（1）求从小到大排列的前n个正偶数的和</p></li>
+</ol>
+<p>(2)求从小到大排列的前n个正奇数的和.</p>
+<p>(3)在三位正整数的集合中有多少个数是5的倍数？求这些数的和.</p>
+<p>(4)在小于100的正整数中，有多少个数被7除余2?这些数的和是多少?</p>
+<p>4.1682年，英国天文学家哈雷发现一颗大彗星的运行曲线和1531年、1607年的彗星惊人地相似.他大胆断定，这是同一天体的三次出现，并预言它将于76年后再度回归这就是著名的哈雷彗星，它的回归周期大约是76年。请你查找资料，列出哈雷彗星的回归时间表，并预测它在本世纪回归的年份.</p>
+<p><img
+src="../assets/a9c5437baf38351a12392a76bd8742823bc492f5cf545612d1bfb6483b184579.jpg" /></p>
+<h2 id="综合运用">综合运用</h2>
+<p>5.已知一个多边形的周长等于158cm，所有各边的长成等差数列，最大的边长为44cm，公差为3
+cm. 求这个多边形的边数.</p>
+<ol start="6" type="1">
+<li><p>数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo><mspace width="0.222em"></mspace><mo>,</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">{</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } \} \ , \quad \{ b _ { n } \}</annotation></semantics></math>
+都是等差数列，且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mrow><mn>1</mn><mn>0</mn><mn>0</mn></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mn>1</mn><mn>0</mn><mn>0</mn></mrow></msub><mo>=</mo><mn>1</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">a _ { 1 } = 5 , ~ b _ { 1 } = 1 5 , ~ a _ { 1 0 0 } + b _ { 1 0 0 } = 1 0 0</annotation></semantics></math>
+求数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ a _ { n } + b _ { n } \}</annotation></semantics></math>
+的前 100项的和.</p></li>
+<li><p>已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">S _ { n }</annotation></semantics></math>
+是等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+的前 n项和.</p></li>
+</ol>
+<ol type="1">
+<li><p>证明
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mfrac><msub><mi>S</mi><mi>n</mi></msub><mi>n</mi></mfrac><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ { \frac { S _ { n } } { n } } \right\}</annotation></semantics></math>
+是等差数列；</p></li>
+<li><p>设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T _ { n }</annotation></semantics></math>
+为数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mfrac><msub><mi>S</mi><mi>n</mi></msub><mi>n</mi></mfrac><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ { \frac { S _ { n } } { n } } \right\}</annotation></semantics></math>
+的前n项和，若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>4</mn></msub><mo>=</mo><mn>1</mn><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>S</mi><mn>8</mn></msub><mo>=</mo><mn>4</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">S _ { 4 } { = } 1 2 , \ S _ { 8 } { = } 4 0</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T _ { n }</annotation></semantics></math>
+。</p></li>
+</ol>
+<p>8.已知两个等差数列2，6，10，…，190及2，8，14，…，200，将这两个等差数列的公共项按从小到大的顺序组成一个新数列.求这个新数列的各项之和.</p>
+<ol start="9" type="1">
+<li>一支车队有15辆车，某天下午依次出发执行运输任务.第一辆车于14时出发，以后每间隔10min发出一辆车.假设所有的司机都连续开车，并都在18时停下来休息.</li>
+</ol>
+<p>(1)截止到18时，最后一辆车行驶了多长时间?</p>
+<p>(2)如果每辆车行驶的速度都是60km/h，这个车队当天一共行驶了多少千米?</p>
+<h2 id="拓广探索">拓广探索</h2>
+<p>10.已知等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+的公差为d，求证
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>−</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mrow><mi>m</mi><mo>−</mo><mi>n</mi></mrow></mfrac><mo>=</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">\frac{a_m-a_n}{m-n}=d</annotation></semantics></math>。你能从直线的斜率角度来解释这个结果吗？</p>
+<p>11.虎甲虫以爬行速度快闻名，下表记录了一只虎甲虫连续爬行
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mspace width="0.222em"></mspace><mi mathvariant="normal">s</mi></mrow><annotation encoding="application/x-tex">n\ \mathrm{s}</annotation></semantics></math>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi><mo>,</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">n=1,2,\ldots,10</annotation></semantics></math>）时爬行的距离.</p>
+<table>
+<tr>
+<td rowspan="1" colspan="1">
+时间/s
+</td>
+<td rowspan="1" colspan="1">
+1
+</td>
+<td rowspan="1" colspan="1">
+2
+</td>
+<td rowspan="1" colspan="1">
+3
+</td>
+<td rowspan="1" colspan="1">
+4
+</td>
+<td rowspan="1" colspan="1">
+5
+</td>
+<td rowspan="1" colspan="1">
+6
+</td>
+<td rowspan="1" colspan="1">
+7
+</td>
+<td rowspan="1" colspan="1">
+8
+</td>
+<td rowspan="1" colspan="1">
+9
+</td>
+<td rowspan="1" colspan="1">
+10
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+距离/m
+</td>
+<td rowspan="1" colspan="1">
+2.50
+</td>
+<td rowspan="1" colspan="1">
+5.03
+</td>
+<td rowspan="1" colspan="1">
+7.55
+</td>
+<td rowspan="1" colspan="1">
+10.05
+</td>
+<td rowspan="1" colspan="1">
+12.45
+</td>
+<td rowspan="1" colspan="1">
+15.01
+</td>
+<td rowspan="1" colspan="1">
+17.28
+</td>
+<td rowspan="1" colspan="1">
+19.90
+</td>
+<td rowspan="1" colspan="1">
+22.48
+</td>
+<td rowspan="1" colspan="1">
+25.07
+</td>
+</tr>
+</table>
+<p>(1）你能建立一个数列模型，近似地表示这只虎甲虫连续爬行的距离与时间之间的关系吗？</p>
+<p>(2)利用建立的模型计算，这只虎甲虫连续爬行1min能爬多远（精确到0.01m)?它连续爬行10
+m需要多长时间（精确到0.1s)？</p>
+<p>12.如图的形状出现在南宋数学家杨辉所著的《详解九章算法·商功》中，后人称为“三角垛”.“三角垛”的最上层有1个球，第二层有3个球，第三层有6个球…设各层球数构成一个数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math></p>
+<ol type="1">
+<li>写出数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+的一个递推公式；</li>
+</ol>
+<p>*(2）根据（1）中的递推公式，写出数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{ a _ { n } \right\}</annotation></semantics></math>
+的一个通项公式.</p>
+<p><img
+src="../assets/0e05283e59b5bc02ae35607f68add1fbf4d35cb5bc57f7cbae052f809f98ce84.jpg" /><br />
+(第12 题)</p>
+<h2 id="沪教版20264.1-等差数列">沪教版2026：4.1 等差数列</h2>
+<p>来源：沪教版选择性必修第一册2026-dollar-polished-fixed.md（本地转写稿），转写稿第
+5044—5490 行；截至下一指定标题前。</p>
+<h2 id="等差数列">4.1 等差数列</h2>
+<h3 id="等差数列及其通项公式">1 等差数列及其通项公式</h3>
+<p>在现实生活中, 我们经常见到按一定顺序排列起来的一列数, 称之为数列.
+我们将数列中的每一个数叫做这个数列的项. 排在第一位的数称为这个数列的第 1
+项 (通常叫做首项), 排在第二位的数称为这个数列的第 2 项,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>⋯</mi><mi>⋯</mi></mrow><annotation encoding="application/x-tex">\cdots \cdots</annotation></semantics></math>
+,排在第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+位的数称为这个数列的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项,等等.</p>
+<p>数列的一般形式可以记成</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>a</mi><mn>3</mn></msub><mo>,</mo><mi>⋯</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><mi>⋯</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">{a}_{1},{a}_{2},{a}_{3},\cdots ,{a}_{n},\cdots ,</annotation></semantics></math></p>
+<p>其中
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{a}_{n}</annotation></semantics></math>
+是数列的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项,下标
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{a}_{n}</annotation></semantics></math>
+的序数. 上面的数列常简记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+.</p>
+<p>观察以下数列, 看它们有什么共同的特点.</p>
+<p>(1)月历(图 4-1-1)最后一列数依次为:</p>
+<p>3, 10, 17, 24, 31.①</p>
+<figure>
+<img
+src="../assets/5f1fad0cc676661e8ba27f9eb4df2152eaed611483db13df85b089d1ee1b6eca.jpg"
+alt="bo_d7fqvdc91nqc7381i9u0_138_560_1445_366_342_0.jpg" />
+<figcaption
+aria-hidden="true">bo_d7fqvdc91nqc7381i9u0_138_560_1445_366_342_0.jpg</figcaption>
+</figure>
+<p>图 4-1-1</p>
+<figure>
+<img
+src="../assets/adb8ce6dec0a0e9a81970f8f04452362e3f9971629a4dcdbc98be48bef6f5f2b.jpg"
+alt="bo_d7fqvdc91nqc7381i9u0_138_960_1459_525_328_0.jpg" />
+<figcaption
+aria-hidden="true">bo_d7fqvdc91nqc7381i9u0_138_960_1459_525_328_0.jpg</figcaption>
+</figure>
+<p>图 4-1-2</p>
+<p>(2)按一定规律堆放在一起的食品罐头(图 4-1-2)，共堆放 7 层,
+从下到上各层的罐头数依次为:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>21</mn><mo>,</mo><mn>18</mn><mo>,</mo><mn>15</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>3</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{21},{18},{15},{12},9,6,3.</annotation></semantics></math></p>
+<p>②</p>
+<p>(3)全国统一的鞋号中，常见的成年女鞋的尺寸(单位:cm)
+由小至大依次为:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22.5</mn><mo>,</mo><mn>23</mn><mo>,</mo><mn>23.5</mn><mo>,</mo><mn>24</mn><mo>,</mo><mn>24.5</mn><mo>,</mo><mn>25</mn><mo>,</mo><mn>25.5</mn><mo>,</mo><mn>26</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{22.5},{23},{23.5},{24},{24.5},{25},{25.5},{26}.</annotation></semantics></math></p>
+<p>③</p>
+<p>可以看到, 对于数列①, 从第 2 项起, 每一项与其前一项的差都等于 7;
+对于数列②, 从第 2 项起, 每一项与其前一项的差都等于 -3 ; 对于数列③，从第
+2 项起，每一项与其前一项的差都等于 0.5 .</p>
+<p>这些数列有一个共同特点: 从第 2 项起,
+每一项与其前一项的差都等于同一个常数.</p>
+<p>定义 如果一个数列从第 2 项起, 每一项与其前一项的差都等于同一个常数,
+这个数列就叫做等差数列 (arithmetic sequence),
+而这个常数叫做等差数列的公差 (common difference). 公差通常用小写字母
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+表示.</p>
+<p>给定一个数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>A</mi><mo>,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, A, b</annotation></semantics></math>
+. 若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>A</mi><mo>,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, A, b</annotation></semantics></math>
+是等差数列,由定义可得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>−</mo><mi>a</mi><mo>=</mo><mi>b</mi><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A - a = b - A</annotation></semantics></math>
+,从而
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">A = \frac{a + b}{2}</annotation></semantics></math>
+. 反之,若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">A = \frac{a + b}{2}</annotation></semantics></math>
+,则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mn>2</mn><mi>A</mi></mrow><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">{2A} = a + b</annotation></semantics></math>
+,即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>−</mo><mi>a</mi><mo>=</mo><mi>b</mi><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A - a = b - A</annotation></semantics></math>
+,从而
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>A</mi><mo>,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, A, b</annotation></semantics></math>
+成等差数列.</p>
+<p>这时,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+叫做
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+的等差中项.</p>
+<p>如果等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的首项为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{a}_{1}</annotation></semantics></math>
+,公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+,由定义可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">{a}_{n} - {a}_{n - 1} = d\left( {n \geq  2}\right) ,</annotation></semantics></math></p>
+<p>从而</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>−</mo><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi>d</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">{a}_{2} - {a}_{1} = d,</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>−</mo><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mi>d</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">{a}_{3} - {a}_{2} = d,</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>4</mn></msub><mo>−</mo><msub><mi>a</mi><mn>3</mn></msub><mo>=</mo><mi>d</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">{a}_{4} - {a}_{3} = d,</annotation></semantics></math></p>
+<p>…</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} - {a}_{n - 1} = d\left( {n \geq  2}\right) .</annotation></semantics></math></p>
+<p>把这
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left( {n - 1}\right)</annotation></semantics></math>
+个等式相加得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">{a}_{n} - {a}_{1} = \left( {n - 1}\right) d,</annotation></semantics></math></p>
+<p>由此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} = {a}_{1} + \left( {n - 1}\right) d\left( {n \geq  2}\right) .</annotation></semantics></math></p>
+<p>当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n = 1</annotation></semantics></math>
+时,容易验证上面的等式也成立. 因此,当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+为正整数时,等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项可以用如下公式表示:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} = {a}_{1} + \left( {n - 1}\right) d.</annotation></semantics></math></p>
+<p>像这种用数列的序数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+表示相应项
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{a}_{n}</annotation></semantics></math>
+的公式称为数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的通项公式. 而上式就是等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的通项公式.</p>
+<hr />
+<p>由三个数组成的等差数列可以看成最简单的等差数列.</p>
+<hr />
+<p><span id="candidate-5"></span></p>
+<p>例 1 已知等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>5</mn><mo>,</mo><mi>−</mi><mn>9</mn><mo>,</mo><mi>−</mi><mn>13</mn><mo>,</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">- 5, - 9, - {13},\cdots</annotation></semantics></math>
+.</p>
+<p>(1)求该等差数列的第 20 项；</p>
+<p>(2)一401 是不是该等差数列的项？如果是，指明是第几项;
+如果不是,请说明理由.</p>
+<p>解 设该等差数列为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+,由
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>5</mn><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mi>−</mi><mn>9</mn></mrow><annotation encoding="application/x-tex">{a}_{1} =  - 5,{a}_{2} =  - 9</annotation></semantics></math>
+,得该等差数列的公差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>−</mi><mn>9</mn><mo>−</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">d =  - 9 - \left( {-5}\right)  =  - 4</annotation></semantics></math>
+. 由等差数列的通项公式,得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>5</mn><mo>−</mo><mn>4</mn><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mrow><mn>4</mn><mi>n</mi></mrow><mo>−</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} =  - 5 - 4\left( {n - 1}\right)  =  - {4n} - 1.</annotation></semantics></math></p>
+<p>(1)由上述通项公式可得, 该等差数列的第 20 项为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>20</mn></msub><mo>=</mo><mi>−</mi><mn>4</mn><mo>×</mo><mn>20</mn><mo>−</mo><mn>1</mn><mo>=</mo><mi>−</mi><mn>81</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{20} =  - 4 \times  {20} - 1 =  - {81}.</annotation></semantics></math></p>
+<p>(2)假设 -401 是这个等差数列中的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项，则有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>401</mn><mo>=</mo><mi>−</mi><mrow><mn>4</mn><mi>n</mi></mrow><mo>−</mo><mn>1</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">- {401} =  - {4n} - 1,</annotation></semantics></math></p>
+<p>解得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>100</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">n = {100}\text{ . }</annotation></semantics></math></p>
+<p>所以, -401 是这个等差数列的第 100 项.</p>
+<p><span id="candidate-6"></span></p>
+<p>例 2 假设体育场一角看台的座位从第 2
+排起每一排都比前一排多相等数目的座位. 若第 3 排有 10 个座位, 第 9 排有
+28 个座位, 则第 12 排有多少个座位?</p>
+<p>解 由题意可知,体育场该角看台每排的座位数成等差数列,设该数列为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+,其公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+,则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>=</mo><mn>10</mn><mo>,</mo><msub><mi>a</mi><mn>9</mn></msub><mo>=</mo><mn>28</mn></mrow><annotation encoding="application/x-tex">{a}_{3} = {10},{a}_{9} = {28}</annotation></semantics></math>
+. 由等差数列的通项公式, 得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>2</mn><mi>d</mi></mrow><mo>=</mo><mn>10</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>8</mn><mi>d</mi></mrow><mo>=</mo><mn>28</mn><mo>,</mo></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{  \begin{array}{l} {a}_{1} + {2d} = {10}, \\  {a}_{1} + {8d} = {28}, \end{array}\right.</annotation></semantics></math></p>
+<p>解得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>4</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>d</mi><mo>=</mo><mn>3</mn><mi>.</mi></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{  \begin{array}{l} {a}_{1} = 4, \\  d = 3. \end{array}\right.</annotation></semantics></math></p>
+<p>所以,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>12</mn></msub><mo>=</mo><mn>4</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>12</mn><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>×</mo><mn>3</mn><mo>=</mo><mn>37</mn></mrow><annotation encoding="application/x-tex">{a}_{12} = 4 + \left( {{12} - 1}\right)  \times  3 = {37}</annotation></semantics></math>
+.</p>
+<p>答: 体育场该角看台的第 12 排有 37 个座位.</p>
+<p><span id="candidate-7"></span></p>
+<p>例 3 已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mrow><mi>p</mi><mi>n</mi></mrow><mo>+</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">{a}_{n} = {pn} + q</annotation></semantics></math>
+是数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的通项公式,其中
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+均为常数. 试判断数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+是否为等差数列,并证明你的结论.</p>
+<p>分析 为了判断
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+是否为等差数列,可以利用等差数列的定义,只要判断
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">{a}_{n} - {a}_{n - 1}\left( {n \geq  2}\right)</annotation></semantics></math>
+的值是否为一个与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+无关的常数即可.</p>
+<p>解 任取数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+中的相邻两项
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{a}_{n}</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">{a}_{n - 1}\left( {n \geq  2}\right)</annotation></semantics></math>
+,求差得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mi>p</mi><mi>n</mi></mrow><mo>+</mo><mi>q</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>q</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} - {a}_{n - 1} = \left( {{pn} + q}\right)  - \left[  {p\left( {n - 1}\right)  + q}\right]   = p\left( {n \geq  2}\right) .</annotation></semantics></math></p>
+<p>因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+是一个与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+无关的常数,所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+是一个等差数列.</p>
+<h4 id="练习-4.11">练习 4.1(1)</h4>
+<ol type="1">
+<li>下列数列中成等差数列的是 ( )</li>
+</ol>
+<p>A.0,1,3,5,7;</p>
+<p>B.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>5</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow><annotation encoding="application/x-tex">1,\frac{1}{3},\frac{1}{5},\frac{1}{7},\frac{1}{9}</annotation></semantics></math>
+;</p>
+<p>C.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><mn>2</mn><mo>,</mo><msqrt><mn>5</mn></msqrt></mrow><annotation encoding="application/x-tex">1,\sqrt{2},\sqrt{3},2,\sqrt{5}</annotation></semantics></math>
+;</p>
+<p>D.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>,</mo><mi>−</mi><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>,</mo><mi>−</mi><mn>1</mn><mo>,</mo><mi>−</mi><mfrac><mn>5</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">1,\frac{1}{3}, - \frac{1}{3}, - 1, - \frac{5}{3}</annotation></semantics></math>
+.</p>
+<ol start="2" type="1">
+<li>设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>1</mn><mo>,</mo><mi>d</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">{a}_{1} =  - 1, d = 4</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>8</mn></msub><annotation encoding="application/x-tex">{a}_{8}</annotation></semantics></math>
+；</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>7</mn></msub><mo>=</mo><mn>8</mn><mo>,</mo><mi>d</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">{a}_{7} = 8, d =  - \frac{1}{3}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{a}_{1}</annotation></semantics></math>
+；</p>
+<p>(3)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>9</mn><mo>,</mo><mi>d</mi><mo>=</mo><mi>−</mi><mn>2</mn><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>15</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = 9, d =  - 2,{a}_{n} =  - {15}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+.</p>
+<ol start="3" type="1">
+<li>已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+是等差数列,正整数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">m,n,p,q</annotation></semantics></math>
+满足
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>+</mo><mi>n</mi><mo>=</mo><mi>p</mi><mo>+</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">m + n = p + q</annotation></semantics></math>
+. 求证:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mspace width="0.278em"></mspace><msub><mi>a</mi><mi>p</mi></msub><mo>+</mo><msub><mi>a</mi><mi>q</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{m} + {a}_{n} = \; {a}_{p} + {a}_{q}.</annotation></semantics></math></li>
+</ol>
+<h3 id="等差数列的前-n-项和">2 等差数列的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和</h3>
+<hr />
+<figure>
+<img
+src="../assets/85e17cb6aca77809c79ed2ea3b974edaa287dd920e9ab19d5792ffb1122a1a96.jpg"
+alt="bo_d7fqvdc91nqc7381i9u0_141_1173_1311_256_329_0.jpg" />
+<figcaption
+aria-hidden="true">bo_d7fqvdc91nqc7381i9u0_141_1173_1311_256_329_0.jpg</figcaption>
+</figure>
+<p>高斯 (C. F. Gauss, 1777—1855) 德国数学家.
+研究的内容涉及数学的诸多领域, 并对天文学和大地测量学的研究有突出贡献.
+他在世界上享有崇高的声望，被誉为 “数学王子”.</p>
+<hr />
+<p>据说 200 多年前,
+著名数学家高斯的算术老师在课堂上曾经提出了下面的问题:</p>
+<p>求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">1 + 2 + 3 + \cdots  + {100}</annotation></semantics></math>
+的值.</p>
+<p>少年高斯用下面的方法迅速算出了正确的答案:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>100</mn><mo>=</mo><mi>?</mi></mrow><annotation encoding="application/x-tex">1 + 2 + 3 + \cdots  + {100} = ?</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>+</mo><mn>99</mn><mo>+</mo><mn>98</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>1</mn><mo>=</mo><mi>?</mi></mrow><annotation encoding="application/x-tex">{100} + {99} + {98} + \cdots  + 1 = ?</annotation></semantics></math></p>
+<p>上述两式相加得:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>101</mn><mo>+</mo><mn>101</mn><mo>+</mo><mn>101</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>101</mn><mo>=</mo><mn>2</mn><mo>×</mo></mrow><annotation encoding="application/x-tex">{101} + {101} + {101} + \cdots  + {101} = 2 \times</annotation></semantics></math>
+?</p>
+<p>所以，结果为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>101</mn><mo>×</mo><mn>100</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>5050</mn></mrow><annotation encoding="application/x-tex">\frac{{101} \times  {100}}{2} = {5050}</annotation></semantics></math>
+.</p>
+<p>高斯的计算方法实际上解决了求等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">1,2,3,\cdots</annotation></semantics></math>
+,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>,</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">n,\cdots</annotation></semantics></math>
+前 100 项和的问题.</p>
+<p>事实上, 古代的中国人和希腊人也是这么求等差数列之和的. 例如,
+宋朝数学家杨辉提出了一个问题: “今有圭垛草一堆, 顶上一束，底阔八束.
+问共几束？答:36 束. ”他的计算方法可以用图 4-1-3 表示.</p>
+<figure>
+<img
+src="../assets/2e87e3a70fda270c1b5ce98261b66335a96b0cc60e91d73a8031946c1bb199fb.jpg"
+alt="bo_d7fqvdc91nqc7381i9u0_142_708_245_641_358_0.jpg" />
+<figcaption
+aria-hidden="true">bo_d7fqvdc91nqc7381i9u0_142_708_245_641_358_0.jpg</figcaption>
+</figure>
+<p>图 4-1-3</p>
+<p>一般地,将数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+,即</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>a</mi><mi>i</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">{S}_{n} = {a}_{1} + {a}_{2} + \cdots  + {a}_{n} = \mathop{\sum }\limits_{{i = 1}}^{n}{a}_{i}.</annotation></semantics></math></p>
+<p>根据等差数列的通项公式, 上式可以写为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>⋯</mi><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mo stretchy="true" form="postfix">]</mo></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . ① </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">{S}_{n} = {a}_{1} + \left( {{a}_{1} + d}\right)  + \cdots  + \left[  {{a}_{1} + \left( {n - 2}\right) d}\right]   + \left[  {{a}_{1} + \left( {n - 1}\right) d}\right]  \text{ . ① }</annotation></semantics></math></p>
+<p>受高斯算法的启示,我们又可将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+表示为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{S}_{n} = {a}_{n} + {a}_{n - 1} + \cdots  + {a}_{2} + {a}_{1}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>⋯</mi><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mo stretchy="true" form="postfix">]</mo></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . ② </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">= {a}_{n} + \left( {{a}_{n} - d}\right)  + \cdots  + \left[  {{a}_{n} - \left( {n - 2}\right) d}\right]   + \left[  {{a}_{n} - \left( {n - 1}\right) d}\right]  \text{ . ② }</annotation></semantics></math></p>
+<p>②</p>
+<p>由①+②, 得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><munder><munder><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>⋯</mi><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mo accent="true">⏟</mo></munder><mrow><mi>n</mi><mo>↑</mo></mrow></munder></mrow><annotation encoding="application/x-tex">2{S}_{n} = \underset{n \uparrow  }{\underbrace{\left( {{a}_{1} + {a}_{n}}\right)  + \left( {{a}_{1} + {a}_{n}}\right)  + \cdots  + \left( {{a}_{1} + {a}_{n}}\right)  + \left( {{a}_{1} + {a}_{n}}\right) }}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">= n\left( {{a}_{1} + {a}_{n}}\right) \text{ . }</annotation></semantics></math></p>
+<p>于是就可得到等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和公式</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">{S}_{n} = \frac{n\left( {{a}_{1} + {a}_{n}}\right) }{2}.</annotation></semantics></math></p>
+<p>由于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">{a}_{n} = {a}_{1} + \left( {n - 1}\right) d</annotation></semantics></math>
+,上述公式又可以写作</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>d</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">{S}_{n} = n{a}_{1} + \frac{n\left( {n - 1}\right) }{2}d.</annotation></semantics></math></p>
+<p><span id="candidate-8"></span></p>
+<p>例 4 设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+.</p>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>50</mn><mo>,</mo><msub><mi>a</mi><mn>8</mn></msub><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = {50},{a}_{8} = {15}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>8</mn></msub><annotation encoding="application/x-tex">{S}_{8}</annotation></semantics></math>
+；</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>0.7</mn><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = {0.7},{a}_{2} = {1.5}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>7</mn></msub><annotation encoding="application/x-tex">{S}_{7}</annotation></semantics></math>
+；</p>
+<p>(3)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>4</mn></msub><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">{a}_{4} = 7</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>7</mn></msub><annotation encoding="application/x-tex">{S}_{7}</annotation></semantics></math>
+.</p>
+<p>解(1)由等差数列的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和公式，得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>8</mn></msub><mo>=</mo><mfrac><mrow><mn>8</mn><mo>×</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>50</mn><mo>+</mo><mn>15</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>=</mo><mn>260</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{S}_{8} = \frac{8 \times  \left( {{50} + {15}}\right) }{2} = {260}.</annotation></semantics></math></p>
+<hr />
+<p>特别地
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>n</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">1 + 2 + 3 + \cdots  + n = \frac{n\left( {n + 1}\right) }{2}.</annotation></semantics></math></p>
+<hr />
+<p>(2)设公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+，则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub><mo>−</mo><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>0.8</mn></mrow><annotation encoding="application/x-tex">d = {a}_{2} - {a}_{1} = {0.8}</annotation></semantics></math>
+，于是由等差数列的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和公式,有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>7</mn></msub><mo>=</mo><mn>7</mn><mo>×</mo><mn>0.7</mn><mo>+</mo><mfrac><mrow><mn>7</mn><mo>×</mo><mn>6</mn></mrow><mn>2</mn></mfrac><mo>×</mo><mn>0.8</mn><mo>=</mo><mn>21.7</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{S}_{7} = 7 \times  {0.7} + \frac{7 \times  6}{2} \times  {0.8} = {21.7}.</annotation></semantics></math></p>
+<p>(3)设公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+，则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><msub><mi>a</mi><mn>4</mn></msub><mo>−</mo><mrow><mn>3</mn><mi>d</mi></mrow><mo>,</mo><msub><mi>a</mi><mn>7</mn></msub><mo>=</mo><msub><mi>a</mi><mn>4</mn></msub><mo>+</mo><mrow><mn>3</mn><mi>d</mi></mrow></mrow><annotation encoding="application/x-tex">{a}_{1} = {a}_{4} - {3d},{a}_{7} = {a}_{4} + {3d}</annotation></semantics></math>
+. 从而</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>7</mn></msub><mo>=</mo><mfrac><mrow><mn>7</mn><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>7</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>7</mn><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>4</mn></msub><mo>−</mo><mrow><mn>3</mn><mi>d</mi></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mn>4</mn></msub><mo>+</mo><mrow><mn>3</mn><mi>d</mi></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><mn>2</mn></mfrac><mo>=</mo><mn>7</mn><msub><mi>a</mi><mn>4</mn></msub><mo>=</mo><mn>49</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{S}_{7} = \frac{7\left( {{a}_{1} + {a}_{7}}\right) }{2} = \frac{7\left[  {\left( {{a}_{4} - {3d}}\right)  + \left( {{a}_{4} + {3d}}\right) }\right]  }{2} = 7{a}_{4} = {49}.</annotation></semantics></math></p>
+<p><span id="candidate-9"></span></p>
+<p>例 5 已知等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的前 10 项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>10</mn></msub><mo>=</mo><mn>310</mn></mrow><annotation encoding="application/x-tex">{S}_{10} = {310}</annotation></semantics></math>
+,前 20 项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>20</mn></msub><mo>=</mo><mn>1220</mn></mrow><annotation encoding="application/x-tex">{S}_{20} = {1220}</annotation></semantics></math>
+,由此可以确定数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+前 30 项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>30</mn></msub><annotation encoding="application/x-tex">{S}_{30}</annotation></semantics></math>
+吗?</p>
+<p>解 设该等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+. 由等差数列的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和公式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mi>d</mi></mrow><annotation encoding="application/x-tex">{S}_{n} = n{a}_{1} + \frac{n\left( {n - 1}\right) }{2}d</annotation></semantics></math>
+,可得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mn>10</mn><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>45</mn><mi>d</mi></mrow><mo>=</mo><mn>310</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mn>20</mn><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>190</mn><mi>d</mi></mrow><mo>=</mo><mn>1220</mn><mo>,</mo></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{  \begin{array}{l} {10}{a}_{1} + {45d} = {310}, \\  {20}{a}_{1} + {190d} = {1220}, \end{array}\right.</annotation></semantics></math></p>
+<p>解得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>4</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>d</mi><mo>=</mo><mn>6</mn><mi>.</mi></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{  \begin{array}{l} {a}_{1} = 4, \\  d = 6. \end{array}\right.</annotation></semantics></math></p>
+<p>所以,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>30</mn></msub><mo>=</mo><mn>30</mn><mo>×</mo><mn>4</mn><mo>+</mo><mfrac><mrow><mn>30</mn><mo>×</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>30</mn><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>×</mo><mn>6</mn><mo>=</mo><mn>2730</mn></mrow><annotation encoding="application/x-tex">{S}_{30} = {30} \times  4 + \frac{{30} \times  \left( {{30} - 1}\right) }{2} \times  6 = {2730}</annotation></semantics></math>
+.</p>
+<p><span id="candidate-10"></span></p>
+<p>例 6 已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mi>n</mi></mrow></mrow><annotation encoding="application/x-tex">{S}_{n} = {n}^{2} + {2n}</annotation></semantics></math>
+.</p>
+<p>(1)求数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的通项公式；</p>
+<p>(2)求证:数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+是等差数列.</p>
+<p>解(1)当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \geq  2</annotation></semantics></math>
+时,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mn>2</mn><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">{S}_{n - 1} = {\left( n - 1\right) }^{2} + 2\left( {n - 1}\right) ,</annotation></semantics></math></p>
+<p>从而</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>S</mi><mi>n</mi></msub><mo>−</mo><msub><mi>S</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mi>n</mi></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">[</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mn>2</mn><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mn>2</mn><mi>n</mi></mrow><mo>+</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} = {S}_{n} - {S}_{n - 1} = {n}^{2} + {2n} - \left[  {{\left( n - 1\right) }^{2} + 2\left( {n - 1}\right) }\right]   = {2n} + 1.</annotation></semantics></math></p>
+<p>而当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n = 1</annotation></semantics></math>
+时,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><msub><mi>S</mi><mn>1</mn></msub><mo>=</mo><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo>×</mo><mn>1</mn><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = {S}_{1} = {1}^{2} + 2 \times  1 = 3</annotation></semantics></math>
+亦满足上式.</p>
+<p>所以,数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的通项公式为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mrow><mn>2</mn><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">{a}_{n} = {2n} + 1</annotation></semantics></math>
+.</p>
+<p>(2)证明:由(1)中的结果，当
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \geq  2</annotation></semantics></math>
+时，</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>2</mn><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mn>1</mn><mo>=</mo><mrow><mn>2</mn><mi>n</mi></mrow><mo>−</mo><mn>1</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">{a}_{n - 1} = 2\left( {n - 1}\right)  + 1 = {2n} - 1,</annotation></semantics></math></p>
+<p>从而</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mn>2</mn><mi>n</mi></mrow><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mn>2</mn><mi>n</mi></mrow><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>2</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} - {a}_{n - 1} = \left( {{2n} + 1}\right)  - \left( {{2n} - 1}\right)  = 2.</annotation></semantics></math></p>
+<p>所以，数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+是一个等差数列.</p>
+<hr />
+<p>如果一个数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>p</mi><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>q</mi><mi>n</mi></mrow><mo>+</mo><mi>r</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">{S}_{n} = p{n}^{2} + {qn} + r,</annotation></semantics></math>
+其中
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>,</mo><mi>q</mi><mo>,</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p,q,r</annotation></semantics></math>
+均为常数, 这个数列是等差数列吗?</p>
+<hr />
+<h4 id="练习-4.12">练习 4.1(2)</h4>
+<ol type="1">
+<li>计算
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mn>2</mn><mi>i</mi></mrow></mrow><annotation encoding="application/x-tex">\mathop{\sum }\limits_{{i = 1}}^{n}{2i}</annotation></semantics></math>
+.</li>
+<li>设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>4</mn><mo>,</mo><msub><mi>a</mi><mn>8</mn></msub><mo>=</mo><mi>−</mi><mn>18</mn></mrow><annotation encoding="application/x-tex">{a}_{1} =  - 4,{a}_{8} =  - {18}</annotation></semantics></math>
+,求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>8</mn></msub><annotation encoding="application/x-tex">{S}_{8}</annotation></semantics></math>
+;</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>4</mn><mo>,</mo><msub><mi>a</mi><mn>12</mn></msub><mo>=</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">{a}_{1} =  - 4,{a}_{12} = {18}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>15</mn></msub><annotation encoding="application/x-tex">{S}_{15}</annotation></semantics></math>
+.</p>
+<ol start="3" type="1">
+<li>已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>3</mn><mi>n</mi></mrow></mrow><annotation encoding="application/x-tex">{S}_{n} = {n}^{2} - {3n}</annotation></semantics></math>
+，求证:数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+是等差数列.</li>
+</ol>
+<h4 id="习题-4.1">习题 4.1</h4>
+<h5 id="a-组">A 组</h5>
+<ol type="1">
+<li>分别求下列两数的等差中项:</li>
+</ol>
+<ol type="1">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mn>8</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{8 - \sqrt{2}}{2}</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mn>8</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{8 + \sqrt{2}}{2}</annotation></semantics></math>
+；___</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">{\left( a + b\right) }^{2}</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">{\left( a - b\right) }^{2}</annotation></semantics></math>
+.</p></li>
+</ol>
+<ol start="2" type="1">
+<li>设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mo>,</mo><mi>d</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = 2, d = 3</annotation></semantics></math>
+,求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>10</mn></msub><annotation encoding="application/x-tex">{a}_{10}</annotation></semantics></math>
+;</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>21</mn><mo>,</mo><mi>d</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = 3,{a}_{n} = {21}, d = 2</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+；</p>
+<p>(3)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>12</mn><mo>,</mo><msub><mi>a</mi><mn>6</mn></msub><mo>=</mo><mn>27</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = {12},{a}_{6} = {27}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+；</p>
+<p>(4)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>6</mn></msub><mo>=</mo><mn>9</mn><mo>,</mo><mi>d</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">{a}_{6} = 9, d =  - \frac{1}{2}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{a}_{1}</annotation></semantics></math>
+.</p>
+<ol start="3" type="1">
+<li>已知数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+. 求证: 对任意给定的正整数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m,n</annotation></semantics></math>
+,都有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mi>m</mi></msub><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">{a}_{n} = {a}_{m} + \left( {n - m}\right) d.</annotation></semantics></math></li>
+<li>设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mn>31</mn><mo>,</mo><msub><mi>a</mi><mn>7</mn></msub><mo>=</mo><mn>76</mn></mrow><annotation encoding="application/x-tex">{a}_{2} = {31},{a}_{7} = {76}</annotation></semantics></math>
+,求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{a}_{1}</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+;</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>6</mn></msub><mo>=</mo><mn>12</mn><mo>,</mo><msub><mi>a</mi><mn>4</mn></msub><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">{a}_{1} + {a}_{6} = {12},{a}_{4} = 7</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>9</mn></msub><annotation encoding="application/x-tex">{a}_{9}</annotation></semantics></math>
+.</p>
+<ol start="5" type="1">
+<li>设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其公差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+,前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>20</mn><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>54</mn><mo>,</mo><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mn>999</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = {20},{a}_{n} = {54},{S}_{n} = {999}</annotation></semantics></math>
+,求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+;</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>,</mo><msub><mi>S</mi><mn>37</mn></msub><mo>=</mo><mn>629</mn></mrow><annotation encoding="application/x-tex">d = \frac{1}{3},{S}_{37} = {629}</annotation></semantics></math>
+,求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{a}_{1}</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>37</mn></msub><annotation encoding="application/x-tex">{a}_{37}</annotation></semantics></math>
+;</p>
+<p>(3)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mfrac><mn>5</mn><mn>6</mn></mfrac><mo>,</mo><mi>d</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">{a}_{1} = \frac{5}{6}, d =  - \frac{1}{6},{S}_{n} =  - 5</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{a}_{n}</annotation></semantics></math>
+；</p>
+<p>(4)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>2</mn><mo>,</mo><msub><mi>a</mi><mn>15</mn></msub><mo>=</mo><mi>−</mi><mn>10</mn></mrow><annotation encoding="application/x-tex">d = 2,{a}_{15} =  - {10}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{a}_{1}</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>15</mn></msub><annotation encoding="application/x-tex">{S}_{15}</annotation></semantics></math>
+.</p>
+<ol start="6" type="1">
+<li>设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>6</mn></msub><mo>=</mo><mn>10</mn><mo>,</mo><msub><mi>S</mi><mn>5</mn></msub><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">{a}_{6} = {10},{S}_{5} = 5</annotation></semantics></math>
+,求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>8</mn></msub><annotation encoding="application/x-tex">{S}_{8}</annotation></semantics></math>
+;</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>4</mn></msub><mo>=</mo><mn>2</mn><mo>,</mo><msub><mi>S</mi><mn>9</mn></msub><mo>=</mo><mi>−</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">{S}_{4} = 2,{S}_{9} =  - 6</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>12</mn></msub><annotation encoding="application/x-tex">{S}_{12}</annotation></semantics></math>
+.</p>
+<ol start="7" type="1">
+<li>设数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+为等差数列,其前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>4</mn></msub><mo>+</mo><msub><mi>a</mi><mn>14</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">{a}_{4} + {a}_{14} = 1</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>17</mn></msub><annotation encoding="application/x-tex">{S}_{17}</annotation></semantics></math>
+；</p>
+<p>(2)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>21</mn></msub><mo>=</mo><mn>420</mn></mrow><annotation encoding="application/x-tex">{S}_{21} = {420}</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>11</mn></msub><annotation encoding="application/x-tex">{a}_{11}</annotation></semantics></math>
+；</p>
+<p>(3)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mn>3</mn></msub><mo>=</mo><mi>−</mi><mn>3</mn><mo>,</mo><msub><mi>a</mi><mn>18</mn></msub><mo>+</mo><msub><mi>a</mi><mn>19</mn></msub><mo>+</mo><msub><mi>a</mi><mn>20</mn></msub><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">{a}_{1} + {a}_{2} + {a}_{3} =  - 3,{a}_{18} + {a}_{19} + {a}_{20} = 6</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>20</mn></msub><annotation encoding="application/x-tex">{S}_{20}</annotation></semantics></math>
+；</p>
+<p>(4)已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>4</mn></msub><mo>=</mo><mn>2</mn><mo>,</mo><msub><mi>S</mi><mn>8</mn></msub><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">{S}_{4} = 2,{S}_{8} = 6</annotation></semantics></math>
+，求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>16</mn></msub><annotation encoding="application/x-tex">{S}_{16}</annotation></semantics></math>
+.</p>
+<ol start="8" type="1">
+<li>求证: “
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>△</mi><mrow><mi>A</mi><mi>B</mi><mi>C</mi></mrow></mrow><annotation encoding="application/x-tex">\bigtriangleup  {ABC}</annotation></semantics></math>
+三个内角的度数可以构成等差数列” 是 “
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>△</mi><mrow><mi>A</mi><mi>B</mi><mi>C</mi></mrow></mrow><annotation encoding="application/x-tex">\bigtriangleup  {ABC}</annotation></semantics></math>
+中有一个内角为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>60</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">{60}^{ \circ  }</annotation></semantics></math>
+”的充要条件.</li>
+</ol>
+<p>9.《九章算术》中的“竹九节”问题: 现有一根 9 节的竹子,
+自上而下各节的容积成等差数列. 若最上面 4 节的容积共 3 升, 最下面 3
+节的容积共 4 升, 则第 5 节的容积为多少升?</p>
+<h5 id="b-组">B 组</h5>
+<p>1.(1)在等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+中，等式
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mn>2</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">{a}_{n} = \frac{{a}_{n - 1} + {a}_{n + 1}}{2}\left( {n \geq  2}\right)</annotation></semantics></math>
+是否都成立？</p>
+<p>(2)在数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+中，如果对于任意的正整数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>≥</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">n\left( {n \geq  2}\right)</annotation></semantics></math>
+，都有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">{a}_{n} = \frac{{a}_{n - 1} + {a}_{n + 1}}{2}</annotation></semantics></math>
+，那么数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+一定是等差数列吗?</p>
+<ol start="2" type="1">
+<li>在等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+中,其前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+. 已知公差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>2</mn><mo>,</mo><msub><mi>S</mi><mn>20</mn></msub><mo>=</mo><mn>400</mn></mrow><annotation encoding="application/x-tex">d = 2,{S}_{20} = {400}</annotation></semantics></math>
+.</li>
+</ol>
+<p>(1)写出
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>10</mn></munderover><msub><mi>a</mi><mrow><mrow><mn>2</mn><mi>i</mi></mrow><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\mathop{\sum }\limits_{{i = 1}}^{{10}}{a}_{{2i} - 1}</annotation></semantics></math>
+的具体展开式，并求其值；</p>
+<p>(2)用求和符号表示
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mn>4</mn></msub><mo>+</mo><msub><mi>a</mi><mn>6</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>a</mi><mn>20</mn></msub></mrow><annotation encoding="application/x-tex">{a}_{2} + {a}_{4} + {a}_{6} + \cdots  + {a}_{20}</annotation></semantics></math>
+，并求其值.</p>
+<ol start="3" type="1">
+<li>在等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+中,已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>3</mn><mo>,</mo><mn>11</mn><msub><mi>a</mi><mn>5</mn></msub><mo>=</mo><mn>5</mn><msub><mi>a</mi><mn>8</mn></msub></mrow><annotation encoding="application/x-tex">{a}_{1} =  - 3,{11}{a}_{5} = 5{a}_{8}</annotation></semantics></math>
+. 求数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+的前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+的最小值.</li>
+<li>已知等差数列
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\left\{  {a}_{n}\right\}</annotation></semantics></math>
+,其前
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+项和为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>n</mi></msub><annotation encoding="application/x-tex">{S}_{n}</annotation></semantics></math>
+. 若存在两个不相等的正整数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+,满足
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>p</mi></msub><mo>=</mo><mi>q</mi><mo>,</mo><msub><mi>S</mi><mi>q</mi></msub><mo>=</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">{S}_{p} = q,{S}_{q} = p</annotation></semantics></math>
+,求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow></msub><annotation encoding="application/x-tex">{S}_{p + q}</annotation></semantics></math>
+.</li>
+<li>已知一个凸多边形各个内角的度数可以排列成一个公差为 5 的等差数列,
+且最小角为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>120</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">{120}^{ \circ  }</annotation></semantics></math>
+,该多边形是几边形?</li>
+<li>某产品按质量分成 10 个档次, 生产最低档次产品的利润是 8 元/件.
+每提高一个档次, 每件产品的利润增加 2 元, 但产量每天减少 3 件.
+如果在某段时间内, 最低档次 (记作第 1 档次) 的产品每天可生产 60 件,
+那么在该段时间内, 生产第几档次的产品可获得最大利润?</li>
+</ol>
+</main></body></html>

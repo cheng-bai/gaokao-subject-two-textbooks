@@ -1,0 +1,1100 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="chengbai"><link rel="stylesheet" href="../阅读样式.css"><title>教材专题摘录</title></head><body><main><nav><a href="../index.html">返回总目录</a></nav><h1 id="古典概型双教材原文摘录">古典概型｜双教材原文摘录</h1>
+<p>本文件保留相关章节的讲解、例题与随堂练习，按版本分段。较宽章节含相邻知识和混合习题，尚未逐题筛选、配答或审校。原文为转写稿，请对照教材原件。</p>
+<h2 id="人教a版10.1.3-古典概型">人教A版：10.1.3 古典概型</h2>
+<p>来源：06_第十章_概率.md（本地转写稿），转写稿第
+291—551 行；截至下一指定标题前。</p>
+<h2 id="古典概型">10.1.3 古典概型</h2>
+<p>研究随机现象，最重要的是知道随机事件发生的可能性大小．对随机事件发生可能性大小的度量（数值）称为事件的概率（probability），事件A的概率用P（A）表示.</p>
+<p>我们知道，通过试验和观察的方法可以得到一些事件的概率估计．但这种方法耗时多，而且得到的仅是概率的近似值．能否通过建立适当的数学模型，直接计算随机事件的概率呢?</p>
+<h2 id="思考">思考</h2>
+<p>在10.1.1节中，我们讨论过彩票摇号试验、抛掷一枚均匀硬币的试验及掷一枚质地均匀骰子的试验．它们的共同特征有哪些？</p>
+<p>考察这些试验的共同特征，就是要看它们的样本点及样本空间有哪些共性．可以发</p>
+<p>现，它们具有如下共同特征：</p>
+<p>（1）有限性：样本空间的样本点只有有限个；</p>
+<p>（2）等可能性：每个样本点发生的可能性相等.</p>
+<p>我们将具有以上两个特征的试验称为古典概型试验，其数学模型称为古典概率模型，简称古典概型.</p>
+<p>下面我们就来研究古典概型.</p>
+<h2 id="思考-1">思考</h2>
+<p>考虑下面两个随机试验，如何度量事件A和事件B 发生的可能性大小？</p>
+<p>(1）一个班级中有18名男生、22名女生．采用抽签的方式，从中随机选择一名学生，事件A=“抽到男生”；</p>
+<p>(2)抛掷一枚质地均匀的硬币3 次，事件B =“恰好一次正面朝上”.</p>
+<p>对于问题（1），班级中共有40名学生，从中选择一名学生，因为是随机选取的，所以选到每个学生的可能性都相等，这是一个古典概型.</p>
+<p>抽到男生的可能性大小，取决于男生数在班级学生数中所占的比例大小．因此，可以用男生数与班级学生数的比值来度量.显然，这个随机试验的样本空间中有40个样本点，而事件A=“抽到男生”包含18个样本点．因此，事件A发生的可能性大小为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mn>8</mn></mrow><mrow><mn>4</mn><mn>0</mn></mrow></mfrac><mo>=</mo><mfrac><mn>9</mn><mrow><mn>2</mn><mn>0</mn></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">{ \frac { 1 8 } { 4 0 } } { = } { \frac { 9 } { 2 0 } } .</annotation></semantics></math></p>
+<p>对于问题（2），我们用1表示硬币“正面朝上”，用0表示硬币“反面朝上”，则试验的样本空间</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r } { \Omega = \{ ( 1 , \ 1 , \ 1 ) , \ ( 1 , \ 1 , \ 0 ) , \ ( 1 , \ 0 , \ 1 ) , \ ( 1 , \ 0 , \ 0 ) , \ } \\ { ( 0 , \ 1 , \ 1 ) , \ ( 0 , \ 1 , \ 0 ) , \ ( 0 , \ 0 , \ 1 ) , \ ( 0 , \ 0 , \ 0 ) \} , } \end{array}</annotation></semantics></math></p>
+<p>共有8个样本点，且每个样本点是等可能发生的，所以这是一个古典概型</p>
+<p>事件B发生的可能性大小，取决于这个事件包含的样本点在样本空间包含的样本点中所占的比例大小.因此，可以用事件包含的样本点数与样本空间包含的样本点数的比值来度量.
+因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">B = \{ ( 1 , \ 0 , \ 0 ) , \ ( 0 , \ 1 , \ 0 ) , \ ( 0 , \ 0 , \ 1 ) \}</annotation></semantics></math>
+，所以事</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>3</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac { 3 } { 8 }</annotation></semantics></math></p>
+<p>一般地，设试验E是古典概型，样本空间Ω包含n个样本点，事件A包含其中的k个样本点，则定义事件A的概率</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>k</mi><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P ( A ) = \frac { k } { n } = \frac { n ( A ) } { n ( \Omega ) } .</annotation></semantics></math></p>
+<p>其中，n（A）和n（Ω）分别表示事件A和样本空间Ω包含的样本点个数.</p>
+<p>①法国数学家拉普拉斯（P.-S.Laplace，17491827）在
+1812年把该式作为概率的一般定义，现在我们称它为概率的古典定义.</p>
+<p><span id="candidate-136"></span></p>
+<p>例7单项选择题是标准化考试中常用的题型，一般是从A，B，C，D四个选项中选择一个正确答案．如果考生掌握了考查的内容，他可以选择唯一正确的答案．假设考生有一题不会做，他随机地选择一个答案，答对的概率是多少？</p>
+<p>解：试验有选A、选B、选C、选D共4种可能结果，试验的样本空间可以表示为<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi mathvariant="normal">A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="normal">B</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="normal">C</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="normal">D</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\Omega = \{ \mathrm { A } , \ \mathrm { B } , \ \mathrm { C } , \ \mathrm { D } \}</annotation></semantics></math>
+．考生随机选择一个答案，表明每个样本点发生的可能性相等，所以这是一个古典概型．设M=“选中正确答案”，因为正确答案是唯一的，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n ( M ) = 1</annotation></semantics></math>
+所以，考生随机选择一个答案，答对的概率</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P ( M ) = { \frac { 1 } { 4 } } .</annotation></semantics></math></p>
+<h2 id="思考-2">思考</h2>
+<p>在标准化考试中也有多选题，多选题是从A，B，C，D四个选项中选出所有正确的答案（四个选项中至少有两个选项是正确的)．你认为单选题和多选题哪种更难选对？为什么？</p>
+<p><span id="candidate-137"></span></p>
+<p>例8
+抛掷两枚质地均匀的骰子（标记为Ⅰ号和Ⅱ号），观察两枚骰子分别可能出现的基本结果.</p>
+<p>（1）写出这个试验的样本空间，并判断这个试验是否为古典概型；</p>
+<p>（2）求下列事件的概率：</p>
+<p>A = “两个点数之和是 5”；</p>
+<p>B = “两个点数相等”；</p>
+<p>C=“I号骰子的点数大于Ⅱ号骰子的点数”.</p>
+<p>解：（1）抛掷一枚骰子有6种等可能的结果，Ⅰ号骰子的每一个结果都可与Ⅱ号骰子的任意一个结果配对，组成掷两枚骰子试验的一个结果．用数字m表示Ⅰ号骰子出现的点数是m，数字n表示Ⅱ号骰子出现的点数是n，则数组(m，n）表示这个试验的一个样本点．因此该试验的样本空间</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mi>m</mi><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><msub><mo stretchy="false" form="prefix">|</mo><mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>1</mn><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mn>2</mn><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mn>3</mn><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mn>4</mn><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mn>5</mn><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="bold">  </mtext><mspace width="0.333em"></mspace></mrow><mn>6</mn><mo stretchy="false" form="postfix">}</mo><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r } { \Omega = \{ ( \textbf { \ } m , \textbf { \ } n ) \ | _ { \textbf { \ } m , n } \in \{ 1 , \textbf { \ } 2 , \textbf { \ } 3 , \textbf { \ } 4 , \textbf { \ } 5 , \textbf { \ } 6 \} \} , } \end{array}</annotation></semantics></math></p>
+<p>其中共有 36 个样本点.</p>
+<p>由于骰子的质地均匀，所以各个样本点出现的可能性相等，因此这个试验是古典概型.</p>
+<p>(2)因为A={(1，4)，(2，3)，(3，2)，(4，1)}，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">n \left( A \right) = 4</annotation></semantics></math>
+，从而</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mn>4</mn><mrow><mn>3</mn><mn>6</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>;</mo></mrow><annotation encoding="application/x-tex">P \left( A \right) = \frac { n \left( A \right) } { n \left( \Omega \right) } = \frac { 4 } { 3 6 } = \frac { 1 } { 9 } ;</annotation></semantics></math></p>
+<p>因为B={(1，1)，(2，2)，(3，3)，(4，4)，(5，5)，(6，6)}，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n ( B ) = 6</annotation></semantics></math>
+，从而</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mn>6</mn><mrow><mn>3</mn><mn>6</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>;</mo></mrow><annotation encoding="application/x-tex">P ( B ) = \frac { n \left( B \right) } { n \left( \Omega \right) } = \frac { 6 } { 3 6 } = \frac { 1 } { 6 } ;</annotation></semantics></math></p>
+<p>因为</p>
+<p>C
+={(2，1)，(3,1)，(3，2)，(4，1)，(4，2)，(4，3)，(5，1)，(5，2),</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">( 5 , \ 3 ) , \ ( 5 , \ 4 ) , \ ( 6 , \ 1 ) , \ ( 6 , \ 2 ) , \ ( 6 , \ 3 ) , \ ( 6 , \ 4 ) , \ ( 6 , \ 5 ) \} ,</annotation></semantics></math></p>
+<p>所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">n \left( C \right) = 1 5</annotation></semantics></math>
+，从而</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mi>n</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mn>5</mn></mrow><mrow><mn>3</mn><mn>6</mn></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mrow><mn>1</mn><mn>2</mn></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P ( C ) = \frac { n \left( C \right) } { n \left( \Omega \right) } = \frac { 1 5 } { 3 6 } = \frac { 5 } { 1 2 } .</annotation></semantics></math></p>
+<h2 id="思考-3">思考</h2>
+<p>在例8中，为什么要把两枚骰子标上记号？如果不给两枚骰子标记号，会出现什么情况？你能解释其中的原因吗？</p>
+<p>如果不给两枚骰子标记号，则不能区分所抛掷出的两个点数分别属于哪枚骰子，如抛掷出的结果是1点和2点，有可能第一枚骰子的结果是1点，也有可能第二枚骰子的结果是1点．这样，（1，2）和（2，1）的结果将无法区别.</p>
+<p>当不给两枚骰子标记号时，试验的样本空间
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mi>m</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">\Omega _ { 1 } = \{ ( m , \ n ) \ | \ m , \ n \in \{ 1 , \ 2 , \ 3 , \ 4 , \nonumber</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">5 , \ 6 \}</annotation></semantics></math>
+，且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>≤</mo><mi>n</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">m \leqslant n \}</annotation></semantics></math>
+，则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝛺</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">n ( \varOmega _ { 1 } ) = 2 1</annotation></semantics></math>
+．其中，事件A=“两个点数之和是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>5</mn><mi mathvariant="fraktur">𝔰</mi></msup><annotation encoding="application/x-tex">5 ^ { \mathfrak { s } }</annotation></semantics></math>
+的结果变为<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">A = \{ ( 1 , \ 4 ) , \ ( 2 , \ 3 ) \}</annotation></semantics></math>
+，这时
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>2</mn><mrow><mn>2</mn><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">P ( A ) = { \frac { 2 } { 2 1 } }</annotation></semantics></math></p>
+<h2 id="思考-4">3 思考</h2>
+<p>同一个事件的概率，为什么会出现两个不同的结果呢？</p>
+<p>可以发现，36个结果都是等可能的；而合并为21个可能结果时，（1，1）和（1，2）发生的可能性大小不等，这不符合古典概型特征，所以不能用古典概型公式计算概率，因此
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>2</mn><mrow><mn>2</mn><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">P ( A ) = { \frac { 2 } { 2 1 } }</annotation></semantics></math>
+是错误的. 2 R</p>
+<h2 id="归纳">归纳</h2>
+<p>求解古典概型問题的一般思路：</p>
+<p>（1）明确试验的条件及要观察的结果，用适当的符号（字母、数字、数组等）表示试验的可能结果（借助图表可以帮助我们不重不漏地列出所有的可能结果)；</p>
+<ol start="2" type="1">
+<li>根据实际问题情境判断样本点的等可能性；</li>
+</ol>
+<p>(3） 计算样本点总个数及事件 A 包含的样本点个数，求出事件 A
+的概率.</p>
+<p><span id="candidate-138"></span></p>
+<p>例9袋子中有5个大小质地完全相同的球，其中2个红球、3个黄球，从中不放回地依次随机摸出2个球，求下列事件的概率：</p>
+<ol type="1">
+<li><p>A = “第一次摸到红球”；</p></li>
+<li><p>B = “第二次摸到红球”；</p></li>
+<li><p>AB = “两次都摸到红球”.</p></li>
+</ol>
+<p>解：将两个红球编号为1，2，三个黄球编号为3，4，5.第一次摸球时有5种等可能的结果，对应第一次摸球的每个可能结果，第二次摸球时都有4种等可能的结果．将两次摸球的结果配对，组成20种等可能的结果，用表10.1-2表示.</p>
+表 10.1-2
+<table>
+<tr>
+<td rowspan="2" colspan="1">
+第一次
+</td>
+<td rowspan="1" colspan="5">
+第二次
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+1
+</td>
+<td rowspan="1" colspan="1">
+2
+</td>
+<td rowspan="1" colspan="1">
+3
+</td>
+<td rowspan="1" colspan="1">
+4
+</td>
+<td rowspan="1" colspan="1">
+5
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+1.
+</td>
+<td rowspan="1" colspan="1">
+×
+</td>
+<td rowspan="1" colspan="1">
+(1,2)
+</td>
+<td rowspan="1" colspan="1">
+(1, 3)
+</td>
+<td rowspan="1" colspan="1">
+(1, 4)
+</td>
+<td rowspan="1" colspan="1">
+(1,5)
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+2
+</td>
+<td rowspan="1" colspan="1">
+(2,1)
+</td>
+<td rowspan="1" colspan="1">
+X
+</td>
+<td rowspan="1" colspan="1">
+(2,3)
+</td>
+<td rowspan="1" colspan="1">
+(2,4)
+</td>
+<td rowspan="1" colspan="1">
+(2，5)
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+3
+</td>
+<td rowspan="1" colspan="1">
+(3, 1)
+</td>
+<td rowspan="1" colspan="1">
+(3,2)
+</td>
+<td rowspan="1" colspan="1">
+X
+</td>
+<td rowspan="1" colspan="1">
+(3，4)
+</td>
+<td rowspan="1" colspan="1">
+(3，5)
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+4
+</td>
+<td rowspan="1" colspan="1">
+(4, 1)
+</td>
+<td rowspan="1" colspan="1">
+(4,2)
+</td>
+<td rowspan="1" colspan="1">
+(4, 3)
+</td>
+<td rowspan="1" colspan="1">
+X
+</td>
+<td rowspan="1" colspan="1">
+(4,5)
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+5
+</td>
+<td rowspan="1" colspan="1">
+(5,1)
+</td>
+<td rowspan="1" colspan="1">
+(5，2)
+</td>
+<td rowspan="1" colspan="1">
+(5，3)
+</td>
+<td rowspan="1" colspan="1">
+(5，4)
+</td>
+<td rowspan="1" colspan="1">
+X
+</td>
+</tr>
+</table>
+<p>（1）第一次摸到红球的可能结果有8种（表中第1，2行），即</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r l } { { } } &amp; { { A = \{ ( 1 , ~ 2 ) , ~ ( 1 , ~ 3 ) , ~ ( 1 , ~ 4 ) , ~ ( 1 , ~ 5 ) , } }  \\ { { } } &amp; { { ( 2 , ~ 1 ) , ~ ( 2 , ~ 3 ) , ~ ( 2 , ~ 4 ) , ~ ( 2 , ~ 5 ) \} , } } \end{array}</annotation></semantics></math></p>
+<p>所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>8</mn><mrow><mn>2</mn><mn>0</mn></mrow></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P \left( A \right) = \frac { 8 } { 2 0 } = \frac { 2 } { 5 } .</annotation></semantics></math></p>
+<p>（2）第二次摸到红球的可能结果也有8种（表中第1，2列），即</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r l } { { } } &amp; { { B = \{ ( 2 , ~ 1 ) , ~ ( 3 , ~ 1 ) , ~ ( 4 , ~ 1 ) , ~ ( 5 , ~ 1 ) , } }  \\ { { } } &amp; { { ( 1 , ~ 2 ) , ~ ( 3 , ~ 2 ) , ~ ( 4 , ~ 2 ) , ~ ( 5 , ~ 2 ) \} , } } \end{array}</annotation></semantics></math></p>
+<p>所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>8</mn><mrow><mn>2</mn><mn>0</mn></mrow></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P ( B ) = { \frac { 8 } { 2 0 } } = { \frac { 2 } { 5 } } .</annotation></semantics></math></p>
+<p>（3）事件AB 包含2个可能结果，即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A B = \{ ( 1 , ~ 2 )</annotation></semantics></math>
+(2，1)}，所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>2</mn><mrow><mn>2</mn><mn>0</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mn>0</mn></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P ( A B ) = \frac { 2 } { 2 0 } = \frac { 1 } { 1 0 } .</annotation></semantics></math></p>
+<p>如果同时摸出2个球，那么事件AB的概率是多少？</p>
+<p><span id="candidate-139"></span></p>
+<p>例10 从两名男生（记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><annotation encoding="application/x-tex">\mathrm { B _ { 1 } }</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">B</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm { B } _ { 2 } )</annotation></semantics></math>
+、两名女生（记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">G</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\mathrm { G } _ { 1 }</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mspace width="0.222em"></mspace></mrow><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm { ~ G _ { 2 } ~ } )</annotation></semantics></math>
+中任意抽取两人，</p>
+<p>（1）分别写出有放回简单随机抽样、不放回简单随机抽样和按性别等比例分层随机抽样的样本空间；</p>
+<p>（2）在三种抽样方式下，分别计算抽到的两人都是男生的概率</p>
+<p>解：设第一次抽取的人记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x _ { 1 }</annotation></semantics></math>
+，第二次抽取的人记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x _ { 2 }</annotation></semantics></math>
+，则可用数组
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝜵</mi><msub><mi>x</mi><mn>1</mn></msub></msub><mo>,</mo><msub><mi mathvariant="bold-italic">𝜵</mi><msub><mi>x</mi><mn>2</mn></msub></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">( \mathbf { \nabla } _ { x _ { 1 } } , \mathbf { \nabla } _ { x _ { 2 } } )</annotation></semantics></math>
+表示样本点.</p>
+<p>（1）根据相应的抽样方法可知：</p>
+<p>有放回简单随机抽样的样本空间</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r l } &amp; { \Omega _ { 1 } = \{ \mathrm { ( B _ { 1 } , ~ B _ { 1 } ) , ~ ( B _ { 1 } , ~ B _ { 2 } ) , ~ ~ ( B _ { 1 } , ~ G _ { 1 } ) , ~ ~ ( B _ { 1 } , ~ G _ { 2 } ) , ~ ~ ( B _ { 2 } , ~ B _ { 1 } ) , ~ ~ ( B _ { 2 } , ~ B _ { 2 } ) , ~ ~ ( B _ { 2 } , ~ B _ { 2 } ) , ~ ~ ( B _ { 2 } , ~ B _ { 2 } ) } } \\ &amp; { \mathrm { ( G _ { 1 } ) , ~ ( B _ { 2 } , ~ G _ { 2 } ) , ~ ( G _ { 1 } , ~ B _ { 1 } ) , ~ ( G _ { 1 } , ~ B _ { 2 } ) , ~ ( G _ { 1 } , ~ G _ { 1 } ) , ~ ( G _ { 1 } ) , ~ ( G _ { 1 } , ~ G _ { 2 } ) , ~ ~ ( G _ { 2 } ) , ~ ( G _ { 2 } , ~ B _ { 1 } ) } , } \\ &amp; { \mathrm { ( G _ { 2 } , ~ B _ { 2 } ) , ~ ( G _ { 2 } , ~ G _ { 1 } ) , ~ ( G _ { 2 } , ~ G _ { 2 } ) } \} . } \end{array}</annotation></semantics></math></p>
+<p>不放回简单随机抽样的样本空间</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><msub><mi mathvariant="normal">Ω</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="2.0em"></mspace><mrow><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array} { r l } &amp; { \Omega _ { 2 } = \{ \mathrm { ( B _ { 1 } , ~ B _ { 2 } ) , ~ ( B _ { 1 } , ~ G _ { 1 } ) , ~ ~ ( B _ { 1 } , ~ G _ { 2 } ) , ~ ~ ( B _ { 2 } , ~ B _ { 1 } ) , ~ ( B _ { 2 } , ~ G _ { 1 } ) , ~ ~ ( B _ { 2 } , ~ G _ { 2 } ) , ~ ~ ( G _ { 1 } , ~ G _ { 2 } ) } , } \\ &amp; { \qquad \mathrm { ~ B _ { 1 } ) , ~ ( G _ { 1 } , ~ B _ { 2 } ) , ~ ( G _ { 1 } , ~ G _ { 2 } ) , ~ ( G _ { 2 } , ~ B _ { 1 } ) , ~ ( G _ { 2 } , ~ B _ { 2 } ) , ~ ( G _ { 2 } , ~ G _ { 1 } ) } \} . } \end{array}</annotation></semantics></math></p>
+<p>按性别等比例分层随机抽样，先从男生中抽一人，再从女生中抽一人，其样本空间</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Ω</mi><mn>3</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi mathvariant="normal">B</mi><mn>1</mn></msub><mo>,</mo><msub><mrow><mspace width="0.222em"></mspace><mi mathvariant="normal">G</mi></mrow><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">G</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\Omega _ { 3 } = \{ \left( \mathrm { B } _ { 1 } , \mathrm { ~ G } _ { 1 } \right) , \mathrm { ~ ( B _ { 1 } , ~ G _ { 2 } ) , ~ ( B _ { 2 } , ~ G _ { 1 } ) , ~ ( B _ { 2 } , ~ G _ { 2 } ) } \} .</annotation></semantics></math></p>
+<ol start="2" type="1">
+<li>设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mo>=</mo><mrow><mn>6</mn><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A = ^ { 6 6 }</annotation></semantics></math>
+抽到两名男生”，则</li>
+</ol>
+<p>对于有放回简单随机抽样，</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">1</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="false" form="prefix" mathvariant="normal">(</mo><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mspace width="0.222em"></mspace><msub><mi mathvariant="normal">B</mi><mn mathvariant="normal">2</mn></msub><mo stretchy="false" form="postfix" mathvariant="normal">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">A = \{ \mathrm { ( B _ { 1 } , ~ B _ { 1 } ) } , ~ \mathrm { ( B _ { 1 } , ~ B _ { 2 } ) } , ~ \mathrm { ( B _ { 2 } , ~ B _ { 1 } ) } , ~ \mathrm { ( B _ { 2 } , ~ B _ { 2 } ) } \} .</annotation></semantics></math></p>
+<p>因为抽中样本空间
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\Omega _ { 1 }</annotation></semantics></math>
+中每一个样本点的可能性都相等，所以这是一个古典概型．因此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>4</mn><mrow><mn>1</mn><mn>6</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P \left( A \right) = \frac { 4 } { 1 6 } = \frac { 1 } { 4 } .</annotation></semantics></math></p>
+<p>对于不放回简单随机抽样，</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="normal">B</mi><mn>1</mn></msub><mo>,</mo><msub><mrow><mspace width="0.222em"></mspace><mi mathvariant="normal">B</mi></mrow><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="normal">B</mi><mn>2</mn></msub><mo>,</mo><msub><mrow><mspace width="0.222em"></mspace><mi mathvariant="normal">B</mi></mrow><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">A = \{ ( \mathrm { B } _ { 1 } , \mathrm { ~ B } _ { 2 } ) , ( \mathrm { B } _ { 2 } , \mathrm { ~ B } _ { 1 } ) \} .</annotation></semantics></math></p>
+<p>因为抽中样本空间
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Ω</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\Omega _ { 2 }</annotation></semantics></math>
+中每一个样本点的可能性都相等，所以这是一个古典概型因此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mrow><mn>1</mn><mn>2</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P \left( A \right) = \frac { 2 } { 1 2 } = \frac { 1 } { 6 } .</annotation></semantics></math></p>
+<p>因为按性别等比例分层随机抽样，不可能抽到两名男生，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">A = \varnothing</annotation></semantics></math>
+，因此
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">P ( A ) = 0 .</annotation></semantics></math></p>
+<p><span id="candidate-140"></span></p>
+<p>例10表明，同一个事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mo>=</mo><mrow><mn>6</mn><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A = ^ { 6 6 }</annotation></semantics></math>
+抽到两名男生”发生的概率，在按性别等比例分层随机抽样时最小，在不放回简单随机抽样时次之，在有放回简单随机抽样时最大．因此，抽样方法不同，则样本空间不同，某个事件发生的概率也可能不同</p>
+<p>上一章我们研究过通过抽样调查估计树人中学高一学生平均身高的问题．我们知道，简单随机抽样使总体中每一个个体都有相等的机会被抽中，但因为抽样的随机性，有可能会出现全是男生的“极端”样本，这就可能高估总体的平均身高。上述计算表明，在总体的男、女生人数相同的情况下，用有放回简单随机抽样进行抽样，出现全是男生的样本的概率为0.25；用不放回简单随机抽样进行抽样，出现全是男生的样本的概率约为0.167，可以有效地降低出现“极端”样本的概率．特别是，在按性别等比例分层随机抽样中，全是男生的样本出现的概率为0，真正避免了这类极端样本的出现．所以，改进抽样方法对于提高样本的代表性很重要.</p>
+<h2 id="练习">练习</h2>
+<ol type="1">
+<li>判断下面的解答是否正确，并说明理由.</li>
+</ol>
+<p>某运动员连续进行两次飞碟射击练习，观察命中目标的情况，用y表示命中，用n表示没有命中，那么试验的样本空间
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>y</mi><mi>y</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>y</mi><mi>n</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mi>y</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mi>n</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\Omega = \{ yy,\ yn,\ ny,\ nn \}</annotation></semantics></math>，因此事件“两次射击都命中”的概率为0.25.</p>
+<p>2.从52张扑克牌（不含大小王）中随机地抽一张牌，计算下列事件的概率：（1）抽到的牌是7；
+（2）抽到的牌不是7； （3）抽到的牌是方片；（4）抽到J或Q或K；
+（5）抽到的牌既是红心又是草花；（6）抽到的牌比6大比9小；（7）抽到的牌是红花色；
+(8）抽到的牌是红花色或黑花色.</p>
+<p>3.从0～9这10个数中随机选择一个数，求下列事件的概率：</p>
+<p>（1）这个数平方的个位数字为1； （2）这个数的四次方的个位数字为1.</p>
+<h2 id="沪教版202612.2-古典概率">沪教版2026：12.2 古典概率</h2>
+<p>来源：沪教版必修第三册2026-dollar-polished.md（本地转写稿），转写稿第
+3365—3875 行；截至下一指定标题前。</p>
+<h2 id="古典概率">12.2 古典概率</h2>
+<p>概率的发展是从等可能的古典概率开始的, 学习概率同样也从这里开始. 此外,
+数学中概率这个概念,
+还应该反映生活中人们对于概率这个常用词的直观认识.</p>
+<h3 id="等可能性与概率">1 等可能性与概率</h3>
+<p>通俗地讲，概率就是可能性的大小.
+我们从最简单的抛掷硬币来学习与概率相关的概念.
+抛掷一枚硬币这个随机试验一共有两个可能的结果: 正面朝上与反面朝上,
+其中必然有且只有一个结果会出现,
+并且两个结果出现的可能性通常被认为是一样的.
+因为习惯地约定必然事件的概率是 1 , 所以正面朝上的可能性即概率是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math>
+. 这里的关键是硬币的两个面出现的可能性一样. 一般地,
+若一个随机试验的所有结果出现的可能性都一样, 则称之为具有等可能性
+(equally likely), 它在许多场合下是直观自然的. Q</p>
+<p>如果一个随机试验满足下面两个条件:(1)包含有限个可能出现的结果(样本点)；(2)这些结果出现是等可能的，那么这样的随机试验就称为古典概率模型.
+它是最常见也是最简单的概率模型.</p>
+<p>在一个古典概率模型中,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Ω</mi><annotation encoding="application/x-tex">\Omega</annotation></semantics></math>
+是一个有限且等可能的样本空间.
+这里等可能的样本空间是指该样本空间中的每个样本点出现的可能性相同.
+因为依照习惯约定必然事件的概率是 1 ,
+所以每个样本点发生的概率自然是样本点总数的倒数. 由于一般的随机事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+是样本点的某个集合,即样本空间的一个子集,用符号
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P\left( A\right)</annotation></semantics></math>
+表示事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+发生的概率 (probability),那么事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+发生的概率为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo stretchy="true" form="postfix">|</mo></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( A\right)  = \frac{\left| A\right| }{\left| \Omega \right| }.</annotation></semantics></math></p>
+<hr />
+<p>为什么硬币的两面出现是等可能的?
+这是由于:(1)假设抛掷的硬币是质地均匀的; (2)假设抛掷的过程是充分随机的.
+这两个假设使得我们确信硬币落地时不会偏向于其任何一面.</p>
+<hr />
+<p>其中,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo stretchy="true" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\left| A\right|</annotation></semantics></math>
+表示事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+中的样本点个数,而
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\left| \Omega \right|</annotation></semantics></math>
+表示样本空间中的样本点个数.
+上式说明概率是事件中的样本点个数与样本空间中样本点个数的比值. Q</p>
+<hr />
+<p>符号
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo stretchy="true" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">\left| A\right|</annotation></semantics></math>
+表示集合
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的元素个数.</p>
+<hr />
+<figure>
+<img
+src="../assets/86eb0715930ce6b9f067b9481a0bcf5b1f2a952df68879ebc0a26cc1718860cc.jpg"
+alt="bo_d7fqrh491nqc7381i7k0_110_251_399_195_231_0.jpg" />
+<figcaption
+aria-hidden="true">bo_d7fqrh491nqc7381i7k0_110_251_399_195_231_0.jpg</figcaption>
+</figure>
+<p><span id="candidate-141"></span></p>
+<p>例 1 抛掷一枚硬币正面朝上和掷一颗骰子得点数 6 的概率分别是多少?</p>
+<p>解(1)抛掷一枚硬币，正面朝上和反面朝上的可能性是一样的,属于古典概率模型,由定义,它们的概率都是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math>
+.</p>
+<hr />
+<p>拉普拉斯 (P.-S. Laplace, 1749—1827) 分别在 1812 年与 1814
+年出版《概率的分析理论》与《概率的哲学探讨》两部著作，明确给出了古典概率的定义,
+总结了那个时代所知的概率研究成果, 并且对概率论在自然科学、社会科学、
+选举、决策、审判等方面的应用作出了开创性的探讨.</p>
+<hr />
+<p>(2)掷一颗骰子，朝上一面的数字是 1、2、3、4、5、6 中的一个, 所以有 6
+个可能结果, 这些结果也是等可能出现的, 所以掷骰子也是一个古典概率模型.
+由定义, 每个结果出现的概率是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>6</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{6}</annotation></semantics></math>
+,从而出现点数 6 的概率是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>6</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{6}</annotation></semantics></math>
+.</p>
+<p>根据概率的定义, 容易得到以下两个简单的性质:</p>
+<p>概率性质 1 必然事件的概率是 1 , 不可能事件的概率是 0 , 即</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>,</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>⌀</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( \Omega \right)  = 1, P\left( \varnothing \right)  = 0.</annotation></semantics></math></p>
+<p>概率性质 2 设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+是一个事件,那么
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0 \leq  P\left( A\right)  \leq  1</annotation></semantics></math>
+.</p>
+<p>Q</p>
+<p><span id="candidate-142"></span></p>
+<p>例 2 同时掷两颗骰子,求:</p>
+<hr />
+<p>在抛掷硬币或掷骰子时, 我们实际上不言自喻地假设等可能性.</p>
+<hr />
+<p>(1)所得点数之和为 5 的概率;</p>
+<p>(2)所得点数相等的概率;</p>
+<p>(3)所得点数都是偶数的概率；</p>
+<p>(4)所得点数相差 2 的概率.</p>
+<p>解 由例 1, 掷两颗骰子(设已标记为不同的颜色)的样本空间是</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∣</mo><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>⋯</mi><mo>,</mo><mn>6</mn><mo>;</mo><mi>j</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>⋯</mi><mo>,</mo><mn>6</mn><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\Omega  = \{ \left( {i, j}\right)  \mid  i = 1,\cdots ,6;j = 1,\cdots ,6\} ,</annotation></semantics></math></p>
+<p>其中
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">i\text{ 、 }j</annotation></semantics></math>
+分别是掷第一颗与第二颗骰子所得的点数. 这个样本空间一共有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>×</mo><mn>6</mn><mo>=</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">6 \times  6 = {36}</annotation></semantics></math>
+个样本点,它们是等可能的.</p>
+<p>(1)将所得点数之和为 5 这个事件用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+表示. 那么,事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+包含以下样本点:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\left( {1,4}\right) \text{ 、 }\left( {2,3}\right) \text{ 、 }\left( {3,2}\right) \text{ 、 }\left( {4,1}\right)</annotation></semantics></math>
+,即</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">A = \{ \left( {1,4}\right) ,\left( {2,3}\right) ,\left( {3,2}\right) ,\left( {4,1}\right) \} .</annotation></semantics></math></p>
+<p>事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+有 4 个样本点,从而点数之和等于 5 的概率为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>4</mn><mn>36</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( A\right)  = \frac{4}{36} = \frac{1}{9}.</annotation></semantics></math></p>
+<p>(2)将所得点数相等这个事件用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+表示. 类似地，有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mo>,</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">B = \{ \left( {1,1}\right) ,\left( {2,2}\right) ,\left( {3,3}\right) ,\left( {4,4}\right) ,\left( {5,5}\right) ,\left( {6,6}\right) \} ,</annotation></semantics></math></p>
+<p>因此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>6</mn><mn>36</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( B\right)  = \frac{6}{36} = \frac{1}{6}.</annotation></semantics></math></p>
+<p>(3)将所得点数都是偶数这个事件用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+表示，类似地，有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">C = \{ \left( {2,2}\right) ,\left( {2,4}\right) ,\left( {2,6}\right) ,\left( {4,2}\right) ,\left( {4,4}\right) ,</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mo>,</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\left( {4,6}\right) ,\left( {6,2}\right) ,\left( {6,4}\right) ,\left( {6,6}\right) \} ,</annotation></semantics></math></p>
+<p>因此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>9</mn><mn>36</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( C\right)  = \frac{9}{36} = \frac{1}{4}.</annotation></semantics></math></p>
+<p>(4)将所得点数相差 2 这个事件用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+表示，类似地，有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mo>,</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mo>,</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">D = \{ \left( {1,3}\right) ,\left( {3,1}\right) ,\left( {2,4}\right) ,\left( {4,2}\right) ,\left( {3,5}\right) ,\left( {5,3}\right) ,\left( {4,6}\right) ,\left( {6,4}\right) \} ,</annotation></semantics></math></p>
+<p>因此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>D</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>8</mn><mn>36</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>9</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( D\right)  = \frac{8}{36} = \frac{2}{9}.</annotation></semantics></math></p>
+<h4 id="练习-12.21">练习 12.2(1)</h4>
+<ol type="1">
+<li>同时掷 2 颗骰子, 求:</li>
+</ol>
+<p>(1)所得点数和为 6 的概率; (2)所得点数和不大于 6 的概率.</p>
+<ol start="2" type="1">
+<li>抛掷 3 枚硬币,求下列事件的概率:</li>
+</ol>
+<p>(1)恰有 2 枚正面朝上； (2)最多 1 枚正面朝上.</p>
+<h3 id="等可能性续">2 等可能性(续)</h3>
+<p>在上一节说过, 随机现象的样本空间的选取依赖于观察的角度,
+但其中事件的概率与观察角度这一主观因素无关, 是确定唯一的.
+在古典概率模型中, 随着观察角度的不同, 并非所有的样本空间都有等可能性.
+例如, 抛掷两枚硬币, 样本空间 (正正,正反,反正,反反) 中的样本点是等可能的,
+但样本空间 (两正,一正一反,两反) 却不是等可能的. 虽然取什么样本空间</p>
+<p>不影响所考察的随机事件的概率, 但只有选取等可能的样本空间,
+才能使得事件的概率如定义所示,
+等于事件中样本点个数与样本空间中样本点个数之比, 进而使有关计算变得简单,
+所以我们通常要选取一个等可能的样本空间.</p>
+<p>怎么得到一个等可能的样本空间呢?
+对抛掷一枚硬币、掷一颗骰子、摸一个球等随机试验来说, 这很简单,
+但对复杂的随机试验来说, 这并不是很容易. 为此,
+通常要将一个随机试验依次分解为若干个等可能的随机试验来处理,
+方法如下:</p>
+<p>设一个随机试验分两步完成,第一步有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+个等可能的结果, 记作</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>⋯</mi><mo>,</mo><msub><mi>a</mi><mi>m</mi></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> ; </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">{a}_{1},{a}_{2},\cdots ,{a}_{m}\text{ ; }</annotation></semantics></math></p>
+<p>而对第一步得到的每个结果,第二步总有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个等可能的结果, 记作</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi>⋯</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">{b}_{1},{b}_{2},\cdots ,{b}_{n}\text{ . }</annotation></semantics></math></p>
+<p>那么, 该随机试验的样本空间就是</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>b</mi><mi>j</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>∣</mo><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>⋯</mi><mo>,</mo><mi>m</mi><mo>;</mo><mi>j</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>⋯</mi><mo>,</mo><mi>n</mi><mo stretchy="true" form="postfix">}</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\Omega  = \left\{  {\left( {{a}_{i},{b}_{j}}\right)  \mid  i = 1,2,\cdots , m;j = 1,2,\cdots , n}\right\}  ,</annotation></semantics></math></p>
+<p>它是等可能的,共有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">{mn}</annotation></semantics></math>
+个样本点. 对多步的等可能随机试验可以类似地构造等可能的样本空间.</p>
+<p><span id="candidate-143"></span></p>
+<p>例 3 从分别写有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B\text{ 、 }C</annotation></semantics></math>
+的三个大小与质地相同的球中任意取两个, 寻找其等可能的样本空间.</p>
+<p>解 取两个球这个试验可以分解为两步: 先取一个不放回, 再取一个. 第一步有
+3 个等可能的结果:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B\text{ 、 }C</annotation></semantics></math>
+. 再取时, 在剩下的两个球中等可能地取一个. 如果第一个取出的是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+, 那么再取时的结果是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+,记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">{AB}</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">{AC}</annotation></semantics></math>
+; 同理,如果第一个取出的是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+,再取的结果是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+,记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">{BA}</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">{BC}</annotation></semantics></math>
+. 依此类推,共有 6 个等可能的结果:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>A</mi><mi>B</mi></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>A</mi><mi>C</mi></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>B</mi><mi>A</mi></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>B</mi><mi>C</mi></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>C</mi><mi>A</mi></mrow></mrow><annotation encoding="application/x-tex">{AB}\text{ 、 }{AC}\text{ 、 }{BA}\text{ 、 }{BC}\text{ 、 }{CA}</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">{CB}</annotation></semantics></math>
+. 这里所写的两个字母是有顺序的,分别表示第一次及第二次取出的球上的字母.
+因此, 这个试验的一个等可能的样本空间是</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>A</mi><mi>B</mi></mrow><mo>,</mo><mrow><mi>A</mi><mi>C</mi></mrow><mo>,</mo><mrow><mi>B</mi><mi>A</mi></mrow><mo>,</mo><mrow><mi>B</mi><mi>C</mi></mrow><mo>,</mo><mrow><mi>C</mi><mi>A</mi></mrow><mo>,</mo><mrow><mi>C</mi><mi>B</mi></mrow><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\Omega  = \{ {AB},{AC},{BA},{BC},{CA},{CB}\} .</annotation></semantics></math></p>
+<p>可以看出, 如果只考虑出现的字母而不考虑顺序, 那么样本空间是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>A</mi><mi>B</mi></mrow><mo>,</mo><mrow><mi>B</mi><mi>C</mi></mrow><mo>,</mo><mrow><mi>C</mi><mi>A</mi></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\Omega  = \{ {AB},{BC},{CA}\}</annotation></semantics></math>
+. 因为其中每个样本点对应前一个样本空间中的两个样本点,
+所以它也是等可能的.</p>
+<p>在上面的例子中, 因为无需考虑顺序,
+所以一次取两个球和依次不放回地取两个球的随机性是一样的.</p>
+<p><span id="candidate-144"></span></p>
+<p>例 4
+从一个放有两个大小与质地相同的白球、一个黑球的罐子中任意摸两个球,
+写出其样本空间并思考: 这个样本空间是否有不同的写法?
+什么样的样本空间有等可能性? 并求至少摸到一个黑球的概率.</p>
+<p>解 把两个白球分别标记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+,而黑球标记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+. 样本空间</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>A</mi><mi>B</mi></mrow><mo>,</mo><mrow><mi>A</mi><mi>C</mi></mrow><mo>,</mo><mrow><mi>B</mi><mi>A</mi></mrow><mo>,</mo><mrow><mi>B</mi><mi>C</mi></mrow><mo>,</mo><mrow><mi>C</mi><mi>A</mi></mrow><mo>,</mo><mrow><mi>C</mi><mi>B</mi></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\Omega  = \{ {AB},{AC},{BA},{BC},{CA},{CB}\}</annotation></semantics></math></p>
+<p>是等可能的. 如果只关心摸到的白球个数,
+那么只看到两个结果:两个白球、一黑一白, 这不是等可能的. 最后,
+从第一个样本空间看, 事件“至少摸到一个黑球”包含 4 个样本点
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">{AC}</annotation></semantics></math>
+,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>B</mi><mi>C</mi></mrow><mo>,</mo><mrow><mi>C</mi><mi>A</mi></mrow><mo>,</mo><mrow><mi>C</mi><mi>B</mi></mrow></mrow><annotation encoding="application/x-tex">{BC},{CA},{CB}</annotation></semantics></math>
+,因此其概率为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>4</mn><mn>6</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{4}{6} = \frac{2}{3}</annotation></semantics></math>
+.</p>
+<h4 id="练习-12.22">练习 12.2(2)</h4>
+<ol type="1">
+<li>掷两颗骰子, 点数之和出现哪个数的可能性最大?</li>
+<li>(配对问题) 三个人抽签, 三个签上事先分别写上了各自的名字.
+求下面事件的概率:</li>
+</ol>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>0</mn></msub><annotation encoding="application/x-tex">{A}_{0}</annotation></semantics></math>
+: 没有人抽到写有自己名字的签；</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{A}_{1}</annotation></semantics></math>
+: 恰有一个人抽到写有自己名字的签；</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>2</mn></msub><annotation encoding="application/x-tex">{A}_{2}</annotation></semantics></math>
+: 恰有两个人抽到写有自己名字的签；</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>3</mn></msub><annotation encoding="application/x-tex">{A}_{3}</annotation></semantics></math>
+: 三个人都抽到写有自己名字的签.</p>
+<h3 id="事件关系和运算">3 事件关系和运算</h3>
+<p>对于一个随机现象而言, 在确定样本空间之后,
+事件对应于样本空间的一个子集,
+通常用相同的字母来表示事件与相应的子集.</p>
+<p>首先,事件之间是有关系的. 设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+对应于子集
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+,事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+对应于子集
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+. 如果
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的样本点都在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+中,那么
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+发生必然
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+发生. 此时,称
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+包含
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+或者
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+包含于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+,即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \subseteq  B</annotation></semantics></math>
+. 例如, 抛掷三枚硬币,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+: 至少有两枚正面朝上,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+: 至少有一枚正面</p>
+<p>朝上，则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \subseteq  B</annotation></semantics></math>
+，即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+发生必然
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+发生，或等价地说，
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+不发生则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+也不发生.</p>
+<p>其次,事件是可以运算的. “两个事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+至少有一个发生”, 这本身也是一个事件,
+是指在两个事件所包含的样本点中至少有一个发生,其对应的子集是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cup  B</annotation></semantics></math>
+. 同样地,“两个事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+同时发生”也是一个事件,是指两个事件的某个共同的样本点发生,其对应的子集是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cap  B</annotation></semantics></math>
+.
+因此,“两个事件至少有一个发生”对应于相应集合的并，而“两个事件同时发生”则对应于相应集合的交.</p>
+<p>如果
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+没有共同的样本点,即两个子集不相交:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">A \cap  B = \varnothing</annotation></semantics></math>
+,那么这两个事件不可能同时发生,或者说互斥.</p>
+<p>“事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+发生”的否定就是“事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+不发生”,它也是一个事件,称为事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的对立事件,简称为“非
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+”. 对应的子集是不属于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的样本点全体,从而是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+在样本空间
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Ω</mi><annotation encoding="application/x-tex">\Omega</annotation></semantics></math>
+中的补集
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{A}</annotation></semantics></math>
+. 显然
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与非
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+不会同时发生,但肯定有一个发生,即成立</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mover><mi>A</mi><mo accent="true">¯</mo></mover><mo>=</mo><mi>⌀</mi><mo>,</mo><mi>A</mi><mo>∪</mo><mover><mi>A</mi><mo accent="true">¯</mo></mover><mo>=</mo><mi mathvariant="normal">Ω</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">A \cap  \overline{A} = \varnothing , A \cup  \overline{A} = \Omega .</annotation></semantics></math></p>
+<p>现在来看“同时发生”及“至少有一个发生”这些事件的否定形式.
+正如“所有人都去”的否定是“至少有一个人没去”一样，“A、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+两个事件同时发生”的否定是 “
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+至少有一个不发生”，或者“
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+不发生或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+不发生”,即成立</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo accent="true">¯</mo></mover><mo>=</mo><mover><mi>A</mi><mo accent="true">‾</mo></mover><mo>∪</mo><mover><mi>B</mi><mo accent="true">‾</mo></mover><mi>.</mi></mrow><annotation encoding="application/x-tex">\overline{A \cap  B} = \bar{A} \cup  \bar{B}.</annotation></semantics></math></p>
+<p>类似地,“
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+两个事件至少有一个发生”的否定是 “
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+都没发生”,即成立</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo accent="true">¯</mo></mover><mo>=</mo><mover><mi>A</mi><mo accent="true">‾</mo></mover><mo>∩</mo><mover><mi>B</mi><mo accent="true">‾</mo></mover><mi>.</mi></mrow><annotation encoding="application/x-tex">\overline{A \cup  B} = \bar{A} \cap  \bar{B}.</annotation></semantics></math></p>
+<p>上面这两个公式是对两个事件来陈述的, 实际上对任意多个事件同样成立.</p>
+<p><span id="candidate-145"></span></p>
+<p>例 5 掷两颗骰子,观察掷得的点数. 设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+: 至少一个是偶数,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+: 至少一个是奇数,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+: 两个点数的乘积是偶数,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+: 两个点数的和是奇数. 讨论:</p>
+<hr />
+<p>事件的关系就是样本空间中相应子集的关系, 事件的运算就是相应子集的运算,
+两者是互相对应的.</p>
+<hr />
+<p>(1)A 与 B 的关系；</p>
+<p>(2)A 和 C 的关系；</p>
+<p>(3)A、B、D 之间的关系；</p>
+<p>(4)C 与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+的关系.</p>
+<p>解 (1)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+发生,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+不一定发生;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+发生,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+不一定发生. 因此,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+互不包含. 此外,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+有可能同时发生,所以它们也不互斥.</p>
+<p>(2)两个点数的乘积是偶数当且仅当其中至少一个是偶数， 即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A = C</annotation></semantics></math>
+.</p>
+<p>(3)两个点数的和是奇数当且仅当一个是奇数一个是偶数， 即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">D = A \cap  B</annotation></semantics></math>
+.</p>
+<p>(4)若两个点数的和是奇数，肯定是一奇一偶，所以其乘积一定是偶数;
+反过来, 乘积是偶数说明两个点数中至少一个是偶数. 因此
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>⊆</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">D \subseteq  A</annotation></semantics></math>
+,且因为 (2),故
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>⊆</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">D \subseteq  C</annotation></semantics></math>
+,但两者不等.</p>
+<p><span id="candidate-146"></span></p>
+<p>例 6 掷两颗骰子,观察掷得的点数. 设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+: 至少一个点数是偶数,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+: 点数之和是偶数. 求:</p>
+<ol type="1">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cup  B</annotation></semantics></math>
+；</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cap  B</annotation></semantics></math>
+.</p></li>
+</ol>
+<p>解(1)
+掷两颗骰子，出现的两个点数可以分成三个互斥的事件:两个都是偶数，记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>0</mn></msub><annotation encoding="application/x-tex">{A}_{0}</annotation></semantics></math>
+；一奇一偶，记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>1</mn></msub><annotation encoding="application/x-tex">{A}_{1}</annotation></semantics></math>
+；两个都是奇数,记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>2</mn></msub><annotation encoding="application/x-tex">{A}_{2}</annotation></semantics></math>
+. 于是有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\Omega  = {A}_{0} \cup  {A}_{1} \cup  {A}_{2}.</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>0</mn></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{A}_{0}\text{ 、 }{A}_{1}</annotation></semantics></math>
+两种情况合起来是事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+,即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A = {A}_{0} \cup  {A}_{1}</annotation></semantics></math>
+,而
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>0</mn></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{A}_{0}\text{ 、 }{A}_{2}</annotation></semantics></math>
+两种情况合起来是事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+,即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">B = {A}_{0} \cup  {A}_{2}</annotation></semantics></math>
+. 因此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mn>0</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mn>0</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub><mo>=</mo><mi mathvariant="normal">Ω</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">A \cup  B = \left( {{A}_{0} \cup  {A}_{1}}\right)  \cup  \left( {{A}_{0} \cup  {A}_{2}}\right)  = {A}_{0} \cup  {A}_{1} \cup  {A}_{2} = \Omega .</annotation></semantics></math></p>
+<p>也就是说, 掷两颗骰子, 或者至少其中一个点数是偶数,
+或者点数之和是偶数.</p>
+<p>(2)事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+同时发生是指至少其中一个点数是偶数，而其点数之和也是偶数,
+从而两个点数必须都是偶数, 即成立</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∣</mo><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mn>6</mn><mo>,</mo><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mn>6</mn><mo>,</mo><mi>i</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>j</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 都是偶数 </mtext><mspace width="0.333em"></mspace></mrow><mo stretchy="false" form="postfix">}</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">A \cap  B = \{ \left( {i, j}\right)  \mid  1 \leq  i \leq  6,1 \leq  j \leq  6, i\text{ 、 }j\text{ 都是偶数 }\} \text{ . }</annotation></semantics></math></p>
+<h4 id="练习-12.23">练习 12.2(3)</h4>
+<ol type="1">
+<li>写出例 6 中事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+各自包含的样本点,表示出
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cup  B</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cap  B</annotation></semantics></math>
+来验证例 6 中的结果.</li>
+</ol>
+<hr />
+<p>也可以直接把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+的样本点一一列出来, 再进行相应的运算, 见练习 12.2(3).</p>
+<hr />
+<ol start="2" type="1">
+<li>把 1、2、3、4、5、6、7、8、9、10 分别写在 10 张一样的卡片上,
+并随机抽取 1 张. 设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+: 出现偶数,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+: 出现 3 的倍数. 写出下面两个事件的对应子集:</li>
+</ol>
+<p>(1)A、B 至少有一个发生； (2)A、B 同时发生.</p>
+<h3 id="可加性">4 可加性</h3>
+<p>概率
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P\left( A\right)</annotation></semantics></math>
+是赋予事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的一个量,它表示事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+发生的可能性大小, 是该事件的客观属性. 对于古典概率模型来说,
+这个量是如下定义的:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo stretchy="true" form="postfix">|</mo></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( A\right)  = \frac{\left| A\right| }{\left| \Omega \right| }.</annotation></semantics></math></p>
+<p>设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+不同时发生,即成立
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">A \cap  B = \varnothing</annotation></semantics></math>
+. 而
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+至少有一个发生的事件是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cup  B</annotation></semantics></math>
+. 因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+中没有共同的元素, 所以并集
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cup  B</annotation></semantics></math>
+的元素个数就是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+及
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+的元素个数之和,即成立</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>B</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\left| {A \cup  B}\right|  = \left| A\right|  + \left| B\right| ,</annotation></semantics></math></p>
+<p>因此</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="true" form="postfix">|</mo></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mo stretchy="true" form="postfix">|</mo></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mo>+</mo><mfrac><mrow><mo stretchy="true" form="prefix">|</mo><mi>B</mi><mo stretchy="true" form="postfix">|</mo></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( {A \cup  B}\right)  = \frac{\left| A \cup  B\right| }{\left| \Omega \right| } = \frac{\left| A\right| }{\left| \Omega \right| } + \frac{\left| B\right| }{\left| \Omega \right| } = P\left( A\right)  + P\left( B\right) .</annotation></semantics></math></p>
+<p>即得到概率的可加性 (additivity):</p>
+<p>概率性质 3 (可加性)
+两个不可能同时发生的事件至少有一个发生的概率是这两个事件的概率之和.
+换言之, 如果
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">A \cap  B = \varnothing</annotation></semantics></math>
+,那么</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( {A \cup  B}\right)  = P\left( A\right)  + P\left( B\right) .</annotation></semantics></math></p>
+<p>将上述可加性用于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mover><mi>A</mi><mo accent="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">B = \bar{A}</annotation></semantics></math>
+特殊情况,由于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mover><mi>A</mi><mo accent="true">‾</mo></mover><mo>=</mo><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">A \cup  \bar{A} = \Omega</annotation></semantics></math>
+,就得到</p>
+<p>概率性质 4 对任一给定事件, 其发生的概率与不发生的概率的和总是 1 .
+换言之, 有 Q</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( A\right)  = 1 - P\left( \bar{A}\right) .</annotation></semantics></math></p>
+<hr />
+<p>很多量有可加性, 如集合的元素个数， 区域的面积, 物体的体积和质量,
+等等, 但也有很多量不具有可加性, 如物体的密度.</p>
+<hr />
+<p>作为度量某事件发生可能性大小的量, 概率最本质的性质就是可加性,
+它在计算概率时非常重要.</p>
+<p><span id="candidate-147"></span></p>
+<p>例 7 抛掷三枚硬币,求:</p>
+<p>(1)至少出现两个正面的概率;</p>
+<p>(2)至少出现一个正面的概率.</p>
+<p>解 用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">H\text{ 、 }T</annotation></semantics></math>
+分别表示正面与反面,则抛掷三枚硬币的样本空间是</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>H</mi><mi>H</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>H</mi><mi>T</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>H</mi><mi>H</mi><mi>T</mi></mrow><mo>,</mo><mrow><mi>H</mi><mi>T</mi><mi>T</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>H</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>T</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>H</mi><mi>T</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>T</mi><mi>T</mi></mrow><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\Omega  = \{ {HHH},{HTH},{HHT},{HTT},{THH},{TTH},{THT},{TTT}\} .</annotation></semantics></math></p>
+<p>(1)令
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+为至少出现两个正面. 恰有两个正面出现的事件为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mrow><mi>H</mi><mi>T</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>H</mi><mi>H</mi><mi>T</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>H</mi><mi>H</mi></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ {HTH},{HHT},{THH}\}</annotation></semantics></math>
+,而恰有三个正面出现的事件为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mrow><mi>H</mi><mi>H</mi><mi>H</mi></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{ {HHH}\}</annotation></semantics></math>
+. 至少有两个正面出现意味着这两个事件至少有一个发生,
+而且这两个事件不会同时发生. 所以，由概率性质 3 , 得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>8</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>4</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( A\right)  = \frac{3}{8} + \frac{1}{8} = \frac{4}{8} = \frac{1}{2}.</annotation></semantics></math></p>
+<p>(2)令
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+为至少出现一个正面，它的对立事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{B}</annotation></semantics></math>
+就是全部为反面,即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>B</mi><mo accent="true">‾</mo></mover><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>T</mi><mi>T</mi><mi>T</mi></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\bar{B} = \{ {TTT}\}</annotation></semantics></math>
+. 所以,由概率性质 4,得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>B</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>7</mn><mn>8</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( B\right)  = 1 - P\left( \bar{B}\right)  = 1 - \frac{1}{8} = \frac{7}{8}.</annotation></semantics></math></p>
+<p>将上述古典概率的基本性质抽象出来, 可得概率满足以下三个性质:</p>
+<p>(1)任意事件 A 的概率介于 0、1 之间，即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0 \leq  P\left( A\right)  \leq  1</annotation></semantics></math>
+；</p>
+<p>(2)规范性:必然事件的概率为 1 ，即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P\left( \Omega \right)  = 1</annotation></semantics></math>
+；</p>
+<p>(3)可加性:若事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+互斥，则</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( {A \cup  B}\right)  = P\left( A\right)  + P\left( B\right) .</annotation></semantics></math></p>
+<p>前面所讲的古典概率是概率的特殊情况和思想源泉, 但应该指出,
+概率不限于古典概率, 如例 8、例 9 所示.</p>
+<p><span id="candidate-148"></span></p>
+<p>例 8 甲、乙两人下棋, 甲获胜的概率为 0.4 , 甲不输的概率为 0.9 .
+求甲、乙两人下成和棋的概率.</p>
+<p>解 用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+表示甲获胜,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+表示和棋,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+表示甲不输. 因为甲不输是指甲获胜或者和棋, 所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">C = A \cup  B\text{ . }</annotation></semantics></math></p>
+<p>而和棋与获胜是互斥的, 由概率性质 3(可加性), 得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( C\right)  = P\left( {A \cup  B}\right)  = P\left( A\right)  + P\left( B\right) .</annotation></semantics></math></p>
+<p>题意说明
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0.9</mn><mo>,</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">P\left( C\right)  = {0.9}, P\left( A\right)  = {0.4}</annotation></semantics></math>
+,因此
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0.9</mn><mo>−</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">P\left( B\right)  = {0.9} - {0.4}</annotation></semantics></math></p>
+<hr />
+<p>本例中所说的概率并不是按古典概率定义的概率.</p>
+<hr />
+<p>由于本章涉及的样本空间都很小, 计算概率只需直接计数.
+为了说明可加性的重要性, 下面举一个稍有难度的例子.</p>
+<p><span id="candidate-149"></span></p>
+<p>例 9 甲、乙各抛掷若干枚硬币，甲抛掷的硬币总数恰比乙少 1 枚.
+问甲得到的正面数比乙得到的正面数少的概率.</p>
+<p>解 设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+: 甲得到的正面数比乙少. 当甲抛掷 1 枚硬币，而乙抛掷 2
+枚的时候，可以列出样本空间</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>H</mi><mi>H</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>H</mi><mi>T</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>H</mi><mi>H</mi><mi>T</mi></mrow><mo>,</mo><mrow><mi>H</mi><mi>T</mi><mi>T</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>H</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>T</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>H</mi><mi>T</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>T</mi><mi>T</mi></mrow><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\Omega  = \{ {HHH},{HTH},{HHT},{HTT},{THH},{TTH},{THT},{TTT}\} ,</annotation></semantics></math></p>
+<p>其中第一个字母表示甲抛掷硬币的结果, 后面两个字母表示乙抛掷硬币的结果.
+那么</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>H</mi><mi>H</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>H</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>T</mi><mi>H</mi></mrow><mo>,</mo><mrow><mi>T</mi><mi>H</mi><mi>T</mi></mrow><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">A = \{ {HHH},{THH},{TTH},{THT}\} ,</annotation></semantics></math></p>
+<p>所以</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>4</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( A\right)  = \frac{4}{8} = \frac{1}{2}.</annotation></semantics></math></p>
+<p>当甲、乙分别抛掷 2 枚及 3 枚硬币的时候，样本空间会有 32 个样本点,
+像上面那样计数计算勉强可行. 但一般的情况用数个数的方法是不行的,
+需要换个思路.</p>
+<p>设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+: 甲得到的反面数比乙的反面数少. 因为硬币的正反面质地均匀,应有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P\left( A\right)  = P\left( B\right)</annotation></semantics></math>
+. 现在我们来证明
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B</annotation></semantics></math>
+是对立事件，即至少有一个发生，但不可能同时发生.
+一方面，如果它们同时发生, 那么甲的正面数和反面数都比乙的少
+(至少各少一个), 从而推出甲抛掷的硬币总数 (正面数与反面数之和)
+至少比乙少两个, 这与题意矛盾. 另一方面, 如果它们都不发生,
+那么甲的正面数和反面数都不比乙的少,
+从而甲抛掷的硬币总数不比乙少,也与题意矛盾.</p>
+<p>这样,就有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mover><mi>A</mi><mo accent="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">B = \bar{A}</annotation></semantics></math>
+. 由概率性质 4,得</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> . </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">P\left( B\right)  = 1 - P\left( A\right) \text{ . }</annotation></semantics></math></p>
+<p>再由
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P\left( A\right)  = P\left( B\right)</annotation></semantics></math>
+,就可推出
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">P\left( A\right)  = \frac{1}{2}</annotation></semantics></math>
+.</p>
+<p>最后, 我们指出, 从两个事件的可加性可以推出任意多个事件的可加性: 如果
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><mi>⋯</mi><mo>,</mo><msub><mi>A</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">{A}_{1},{A}_{2},\cdots ,{A}_{n}</annotation></semantics></math>
+是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个两两互斥的事件, 那么</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub><mo>∪</mo><mi>⋯</mi><mo>∪</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>⋯</mi><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( {{A}_{1} \cup  {A}_{2} \cup  \cdots  \cup  {A}_{n}}\right)  = P\left( {A}_{1}\right)  + P\left( {A}_{2}\right)  + \cdots  + P\left( {A}_{n}\right) .</annotation></semantics></math></p>
+<hr />
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个事件两两互斥的含义是:从这
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个事件中任意选取两个都是互斥事件.</p>
+<hr />
+<h4 id="练习-12.24">练习 12.2(4)</h4>
+<ol type="1">
+<li>已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 、 </mtext><mspace width="0.333em"></mspace></mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">A\text{ 、 }B\text{ 、 }C</annotation></semantics></math>
+是三个两两互斥的事件,求证:</li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( {A \cup  B \cup  C}\right)  = P\left( A\right)  + P\left( B\right)  + P\left( C\right) .</annotation></semantics></math></p>
+<ol start="2" type="1">
+<li>已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+是两个事件，求证:</li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mover><mi>B</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">P\left( {A \cap  \bar{B}}\right)  = P\left( A\right)  - P\left( {A \cap  B}\right) .</annotation></semantics></math></p>
+<ol start="3" type="1">
+<li>一次期中考试, 小明数学超过 90 分的概率是 0.5 , 物理超过 90
+分的概率是 0.7 , 两门课都超过 90 分的概率是 0.3 .
+求他的数学和物理至少有一门超过 90 分的概率.</li>
+</ol>
+<h4 id="习题-12.2">习题 12.2</h4>
+<h5 id="a-组">A 组</h5>
+<ol type="1">
+<li>从 1、2、3、4、5 中任取 3 个不同的数，求这 3
+个数构成一组勾股数(或者说恰为一个直角三角形的三条边长) 的概率.</li>
+<li>如果将一枚质地均匀的硬币连续抛掷 100 次, 那么第 99
+次出现反面朝上的概率是 ( )</li>
+</ol>
+<p>A.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>100</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{100}</annotation></semantics></math>
+; B.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>99</mn><mn>100</mn></mfrac><annotation encoding="application/x-tex">\frac{99}{100}</annotation></semantics></math>
+; C.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>99</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{99}</annotation></semantics></math>
+; D.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math>
+.</p>
+<ol start="3" type="1">
+<li>在分别写有数字 0、1、2、3、4、5、6、7、8、9 的 10
+张一样的卡片中随机抽取 1 张. 设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+: 出现奇数,事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+: 出现偶数,事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+: 大于 4 . 写出下列事件对应的集合:</li>
+</ol>
+<ol type="1">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+同时发生； (2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+至少有一个发生；</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+同时发生.</p></li>
+</ol>
+<ol start="4" type="1">
+<li>掷一颗骰子,设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+: 落地时向上的点数是奇数,事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+: 落地时向上的点数是偶数,事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+: 落地时向上的点数是 3 的倍数,事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+: 落地时向上的点数是 4 . 则下列每对事件中, 不是互斥事件的为 ( )</li>
+</ol>
+<p>A.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+; B.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+; C.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+; D.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+.</p>
+<figure>
+<img
+src="../assets/3d6bef0aa8488e66c6ff84b5897ab27ebed09bd436d910a4717654e5d012e88d.jpg"
+alt="bo_d7fqrh491nqc7381i7k0_119_1207_1804_261_265_0.jpg" />
+<figcaption
+aria-hidden="true">bo_d7fqrh491nqc7381i7k0_119_1207_1804_261_265_0.jpg</figcaption>
+</figure>
+<p>(第 5 题)</p>
+<ol start="5" type="1">
+<li>如图, 靶子由一个中心圆面 I 和两个与 I 同心的圆环 II、III构成,
+射手命中 I 、II 及 III 的概率分别为 0.35、0.30 及 0.25 .
+求不命中靶的概率.</li>
+<li>盒子里装有大小与质地相同的红球与白球, 从中任取 3 个球. 设事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+表示“3 个球中有 1 个红球、 2 个白球”, 事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+表示“3 个球中中有 2 个红球、 1 个白球”. 已知
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>10</mn></mfrac><mo>,</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">P\left( A\right)  = \frac{3}{10}, P\left( B\right)  = \frac{1}{2}</annotation></semantics></math>
+. 求 “ 3 个球中</li>
+</ol>
+<p>既有红球又有白球”的概率.</p>
+<h5 id="b-组">B 组</h5>
+<ol type="1">
+<li>已知 4 张奖券中只有 1 张能中奖，现分别由 4
+名学生依次抽取(抽出后不放回)，他们的中奖概率是否一样？为什么？</li>
+<li>已知 5 件产品中有 2 件次品、3 件合格品, 从这 5 件产品中任取 2 件,
+求:</li>
+</ol>
+<p>(1)恰有 1 件次品的概率; (2)2 件都是合格品的概率.</p>
+<ol start="3" type="1">
+<li>已知关于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+的一元二次方程
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mi>a</mi><mi>x</mi></mrow><mo>+</mo><mn>3</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">{x}^{2} - {ax} + 3 = 0</annotation></semantics></math>
+,其中
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+是掷一颗骰子得到的点数. 求下列事件的概率:</li>
+</ol>
+<p>(1)方程有两个不相等的实根； (2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = 3</annotation></semantics></math>
+是方程的根；</p>
+<p>(3)方程存在正根.</p>
+<ol start="4" type="1">
+<li>已知事件
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+互斥,它们都不发生的概率为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>2</mn><mn>5</mn></mfrac><annotation encoding="application/x-tex">\frac{2}{5}</annotation></semantics></math>
+,且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mn>2</mn><mi>P</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P\left( A\right)  = {2P}\left( B\right)</annotation></semantics></math>
+. 求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P\left( \bar{A}\right)</annotation></semantics></math>
+.</li>
+<li>袋中有大小与质地相同的 12 个小球, 分别为红球、黑球、黄球、绿球,
+从中任取 1 个球,得到红球的概率是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>3</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math>
+,得到黑球或黄球的概率是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>12</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{12}</annotation></semantics></math>
+,得到黄球或绿球的概率是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>12</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{12}</annotation></semantics></math>
+. 试求得到黑球、黄球、绿球的概率各是多少.</li>
+</ol>
+</main></body></html>
